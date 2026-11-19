@@ -2,156 +2,414 @@
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>OneLaser Product Images</title>
+<meta name="description" content="OneLaser product image library, grouped by machine · OneLaser 全系列产品原图库，按机型分类">
+<meta property="og:title" content="OneLaser Product Images">
+<meta property="og:description" content="OneLaser product image library · 产品原图库">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23d7261e'/><text x='16' y='23' font-size='20' text-anchor='middle' fill='white' font-family='Arial' font-weight='700'>1</text></svg>">
 <style>
-:root{--bg:#f6f6f4;--card:#fff;--ink:#141414;--mute:#6b6b6b;--line:#e4e4e0;--accent:#d7261e;--chip:#ececE8}
-@media (prefers-color-scheme:dark){:root{--bg:#111;--card:#1b1b1b;--ink:#f1f1f1;--mute:#9a9a9a;--line:#2a2a2a;--chip:#232323}}
+:root{
+  --bg:#f5f5f3;--card:#ffffff;--ink:#121212;--mute:#737373;--line:#e3e3df;--chip:#ebebe7;
+  --accent:#d7261e;--photo:#ffffff;--shadow:0 1px 2px rgba(0,0,0,.04),0 4px 16px rgba(0,0,0,.05);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0f0f0f;--card:#191919;--ink:#f2f2f2;--mute:#8f8f8f;--line:#2a2a2a;--chip:#232323;--shadow:none}}
+:root[data-theme="dark"]{--bg:#0f0f0f;--card:#191919;--ink:#f2f2f2;--mute:#8f8f8f;--line:#2a2a2a;--chip:#232323;--shadow:none}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 -apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue",Arial,sans-serif}
-header{padding:32px 20px 12px;max-width:1400px;margin:0 auto}
-h1{margin:0;font-size:26px;letter-spacing:-.01em}
-h1 b{color:var(--accent)}
-.sub{color:var(--mute);margin-top:4px}
-nav{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-nav .in{max-width:1400px;margin:0 auto;padding:10px 20px;display:flex;gap:8px;overflow-x:auto;scrollbar-width:none}
-nav a{flex:none;padding:6px 12px;border-radius:999px;background:var(--chip);color:var(--ink);text-decoration:none;font-size:14px;white-space:nowrap}
-nav a.on{background:var(--ink);color:var(--bg)}
-nav a span{color:var(--mute);margin-left:4px;font-size:12px}
-nav a.on span{color:inherit;opacity:.7}
-main{max-width:1400px;margin:0 auto;padding:8px 20px 60px}
-section{padding-top:28px;scroll-margin-top:56px}
-.sh{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:12px}
-.sh h2{margin:0;font-size:20px}
-.sh .n{color:var(--mute)}
-.filters{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px}
-.filters a{padding:5px 12px;border:1px solid var(--line);border-radius:999px;background:var(--card);color:var(--ink);text-decoration:none;font-size:14px}
-.filters a:hover,.filters a:focus-visible{border-color:var(--ink)}
-.filters a[aria-current="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
-.btn{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:8px;padding:5px 10px;font-size:13px;cursor:pointer}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 -apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+button{font:inherit;color:inherit}
+[hidden]{display:none!important}
+.wrap{max-width:1440px;margin:0 auto;padding:0 24px}
+
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:20px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.04em}
+.brand i{width:26px;height:26px;border-radius:6px;background:var(--accent);color:#fff;display:grid;place-items:center;font-style:normal;font-size:15px}
+.tools{display:flex;gap:8px}
+.lang{display:flex;border:1px solid var(--line);border-radius:9px;overflow:hidden;background:var(--card)}
+.lang button{border:0;background:none;padding:6px 11px;font-size:13px;cursor:pointer;color:var(--mute)}
+.lang button.on{background:var(--ink);color:var(--bg)}
+.hero{padding:26px 0 28px}
+.hero h1{font-size:clamp(28px,4vw,44px);line-height:1.1;margin:0 0 10px;letter-spacing:-.02em}
+.hero p{margin:0;color:var(--mute);max-width:660px}
+.stats{display:flex;gap:28px;margin-top:22px;flex-wrap:wrap}
+.stats b{display:block;font-size:22px;letter-spacing:-.01em}
+.stats span{color:var(--mute);font-size:13px}
+.hero .acts{display:flex;gap:10px;margin-top:22px;flex-wrap:wrap}
+
+.btn{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--card);border-radius:9px;padding:7px 12px;font-size:13px;cursor:pointer;text-decoration:none;white-space:nowrap;transition:border-color .15s}
 .btn:hover{border-color:var(--ink)}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden;cursor:zoom-in;display:flex;flex-direction:column}
-.card[hidden]{display:none}
-.card .im{aspect-ratio:4/3;background:#fff;display:flex;align-items:center;justify-content:center}
-.card img{max-width:100%;max-height:100%;object-fit:contain;display:block}
-.card .meta{padding:8px 10px;font-size:12px;border-top:1px solid var(--line)}
-.card .nm{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.btn.pri{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn.pri:hover{filter:brightness(1.08)}
+.btn svg{width:15px;height:15px;flex:none}
+
+.ov{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin-bottom:8px}
+.mc{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;text-decoration:none;display:flex;flex-direction:column;box-shadow:var(--shadow);transition:transform .15s,border-color .15s}
+.mc:hover{transform:translateY(-2px);border-color:var(--ink)}
+.mc .cv{aspect-ratio:16/10;background:var(--photo);display:flex;align-items:center;justify-content:center;padding:10px}
+.mc .cv img{max-width:100%;max-height:100%;object-fit:contain}
+.mc .tx{padding:10px 12px;display:flex;justify-content:space-between;align-items:baseline;gap:8px;border-top:1px solid var(--line)}
+.mc .tx b{font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mc .tx span{color:var(--mute);font-size:12px;white-space:nowrap}
+
+.bar{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:saturate(1.4) blur(12px);-webkit-backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;align-items:center;gap:12px;padding-top:10px;padding-bottom:10px}
+.tabs{flex:1;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;min-width:0;mask-image:linear-gradient(90deg,#000 92%,transparent)}
+.tabs::-webkit-scrollbar{display:none}
+.tabs a{flex:none;padding:6px 12px;border-radius:999px;background:var(--chip);text-decoration:none;font-size:13px;white-space:nowrap}
+.tabs a span{color:var(--mute);margin-left:4px;font-size:12px}
+.tabs a.on{background:var(--ink);color:var(--bg)}
+.tabs a.on span{color:inherit;opacity:.65}
+.search{position:relative;flex:none}
+.search input{width:210px;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:9px;padding:7px 10px 7px 30px;font:inherit;font-size:13px;outline:none}
+.search input:focus{border-color:var(--ink)}
+.search svg{position:absolute;left:9px;top:50%;transform:translateY(-50%);width:14px;height:14px;color:var(--mute)}
+.seg{display:flex;border:1px solid var(--line);border-radius:9px;overflow:hidden;flex:none}
+.seg button{border:0;background:var(--card);padding:6px 9px;cursor:pointer;display:grid;place-items:center;color:var(--mute)}
+.seg button.on{background:var(--chip);color:var(--ink)}
+.seg svg{width:15px;height:15px}
+
+main{padding-bottom:80px}
+section{padding-top:36px;scroll-margin-top:60px}
+.sh{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.sh h2{margin:0;font-size:22px;letter-spacing:-.01em}
+.sh .n{color:var(--mute);font-size:14px;margin-right:auto}
+.filters{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 12px}
+.filters a{padding:5px 12px;border:1px solid var(--line);border-radius:999px;background:var(--card);text-decoration:none;font-size:13px}
+.filters a:hover{border-color:var(--ink)}
+.filters a[aria-current="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(var(--col,220px),1fr));gap:12px}
+body.dense .grid{--col:150px;gap:8px}
+body.dense .card .meta{display:none}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;cursor:zoom-in;display:flex;flex-direction:column;transition:border-color .15s,transform .15s;padding:0;text-align:left}
+.card:hover{border-color:var(--ink);transform:translateY(-1px)}
+.card:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.card .im{aspect-ratio:4/3;background:var(--photo);display:flex;align-items:center;justify-content:center;overflow:hidden;width:100%}
+.card img{width:100%;height:100%;object-fit:contain;display:block;opacity:0;transition:opacity .3s}
+.card img.ok{opacity:1}
+.card .meta{padding:8px 10px;font-size:12px;border-top:1px solid var(--line);width:100%}
+.card .nm{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:500}
 .card .dm{color:var(--mute)}
-#lb{position:fixed;inset:0;background:rgba(0,0,0,.88);display:none;flex-direction:column;z-index:20}
+.empty{color:var(--mute);padding:40px 0;text-align:center}
+footer{color:var(--mute);font-size:12px;padding:24px 0 40px;border-top:1px solid var(--line);word-break:break-all}
+
+#lb{position:fixed;inset:0;background:rgba(10,10,10,.94);display:none;flex-direction:column;z-index:50;color:#fff}
 #lb.show{display:flex}
-#lb .top{display:flex;gap:8px;align-items:center;padding:12px 16px;color:#fff;flex-wrap:wrap}
-#lb .top .t{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-#lb .top .btn{background:#222;color:#fff;border-color:#444;text-decoration:none}
-#lb .stage{flex:1;display:flex;align-items:center;justify-content:center;min-height:0;padding:0 16px 16px}
-#lb .stage img{max-width:100%;max-height:100%;object-fit:contain;background:#fff}
-#toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:8px 14px;border-radius:8px;font-size:14px;opacity:0;transition:opacity .2s;z-index:30;pointer-events:none}
-#toast.show{opacity:1}
-@media (max-width:600px){.grid{grid-template-columns:repeat(2,1fr);gap:8px}header{padding:20px 16px 8px}main,nav .in{padding-left:16px;padding-right:16px}}
+#lb .lt{display:flex;gap:8px;align-items:center;padding:12px 16px;flex-wrap:wrap}
+#lb .t{flex:1;min-width:180px}
+#lb .t b{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#lb .t span{font-size:12px;color:#aaa}
+#lb .btn{background:#1e1e1e;border-color:#3a3a3a;color:#fff}
+#lb .btn:hover{border-color:#fff}
+#lb .btn.pri{background:var(--accent);border-color:var(--accent)}
+#lb .stage{flex:1;position:relative;display:flex;align-items:center;justify-content:center;min-height:0;padding:0 64px 20px;touch-action:pan-y}
+#lb .stage img{max-width:100%;max-height:100%;object-fit:contain;background:#fff;border-radius:4px;user-select:none;-webkit-user-drag:none}
+#lb .nav{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:1px solid #3a3a3a;background:#1e1e1e;color:#fff;cursor:pointer;font-size:22px;line-height:1}
+#lb .nav:hover{border-color:#fff}
+#lb .prev{left:12px}#lb .next{right:12px}
+#lb .spin{position:absolute;width:28px;height:28px;border:3px solid #444;border-top-color:#fff;border-radius:50%;animation:sp .8s linear infinite;display:none}
+#lb.loading .spin{display:block}
+@keyframes sp{to{transform:rotate(360deg)}}
+.menu{position:relative}
+.menu .pop{position:absolute;right:0;top:calc(100% + 6px);background:#1e1e1e;border:1px solid #3a3a3a;border-radius:10px;padding:4px;display:none;min-width:180px;z-index:2}
+.menu.open .pop{display:block}
+.menu .pop button{display:block;width:100%;text-align:left;background:none;border:0;padding:8px 10px;border-radius:7px;cursor:pointer;font-size:13px;color:#fff}
+.menu .pop button:hover{background:#2c2c2c}
+
+#toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,8px);background:var(--ink);color:var(--bg);padding:9px 16px;border-radius:9px;font-size:14px;opacity:0;transition:.2s;z-index:60;pointer-events:none}
+#toast.show{opacity:1;transform:translate(-50%,0)}
+
+@media (max-width:720px){
+  .wrap{padding:0 16px}
+  .hero{padding:20px 0 20px}
+  .stats{gap:20px}
+  .bar .wrap{flex-wrap:wrap;gap:8px}
+  .tabs{order:3;flex-basis:100%}
+  .search{flex:1}.search input{width:100%}
+  .grid{--col:150px;gap:8px}
+  body.dense .grid{--col:100px;gap:6px}
+  .ov{grid-template-columns:repeat(2,1fr);gap:8px}
+  #lb .stage{padding:0 8px 12px}
+  #lb .nav{display:none}
+  #lb .t{flex-basis:100%;order:-1}
+}
 </style>
 </head>
 <body>
-<header>
-  <h1><b>OneLaser</b> Product Images</h1>
-  <div class="sub">按机型分类 · 共 207 张原图 · 点击图片查看大图、复制直链或下载</div>
-</header>
-<nav><div class="in" id="nav"></div></nav>
-<main id="main"></main>
-<div id="lb"><div class="top"><span class="t" id="lbt"></span><button class="btn" id="lbp">←</button><button class="btn" id="lbn">→</button><button class="btn" id="lbc">复制链接</button><a class="btn" id="lbd" download>下载原图</a><button class="btn" id="lbx">关闭 ✕</button></div><div class="stage"><img id="lbi" alt=""></div></div>
+<div class="wrap top">
+  <div class="brand"><i>1</i>ONELASER</div>
+  <div class="tools">
+    <div class="lang" role="group" aria-label="Language"><button data-lang="zh">中文</button><button data-lang="en">EN</button></div>
+    <button class="btn" id="theme" aria-label="Theme">◐</button>
+  </div>
+</div>
+<div class="wrap hero">
+  <h1 data-i="h1"></h1>
+  <p data-i="intro"></p>
+  <div class="stats" id="stats"></div>
+  <div class="acts">
+    <a class="btn pri" href="https://github.com/Yonge6/onelaser-product-images/releases/download/v2026.11.19b/onelaser-all-images.zip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16"/></svg><span data-i="allzip"></span></a>
+    <a class="btn" href="https://github.com/Yonge6/onelaser-product-images" target="_blank" rel="noopener" data-i="repo"></a>
+  </div>
+</div>
+
+<div class="wrap"><div class="ov" id="ov"></div></div>
+
+<div class="bar">
+  <div class="wrap">
+    <div class="tabs" id="tabs"></div>
+    <label class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><input id="q" type="search" autocomplete="off"></label>
+    <div class="seg" role="group">
+      <button id="big" class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="8" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/></svg></button>
+      <button id="small"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h4v4H3zM10 3h4v4h-4zM17 3h4v4h-4zM3 10h4v4H3zM10 10h4v4h-4zM17 10h4v4h-4zM3 17h4v4H3zM10 17h4v4h-4zM17 17h4v4h-4z"/></svg></button>
+    </div>
+  </div>
+</div>
+
+<main class="wrap" id="main"></main>
+<p class="wrap empty" id="empty" hidden data-i="empty"></p>
+<footer class="wrap"><span data-i="foot"></span> 2026-11-19b · raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/&lt;series&gt;/&lt;file&gt;</footer>
+
+<div id="lb" aria-modal="true" role="dialog">
+  <div class="lt">
+    <div class="t"><b id="lbt"></b><span id="lbs"></span></div>
+    <div class="menu" id="cm"><button class="btn" id="cmb"><span data-i="copy"></span> ▾</button>
+      <div class="pop"><button data-f="url" data-i="cUrl"></button><button data-f="md">Markdown</button><button data-f="html">HTML &lt;img&gt;</button><button data-f="page" data-i="cPage"></button></div></div>
+    <a class="btn pri" id="lbd" download data-i="download"></a>
+    <button class="btn" id="lbx" aria-label="Close">✕</button>
+  </div>
+  <div class="stage" id="stage">
+    <button class="nav prev" id="lbp" aria-label="Previous">‹</button>
+    <img id="lbi" alt=""><div class="spin"></div>
+    <button class="nav next" id="lbn" aria-label="Next">›</button>
+  </div>
+</div>
 <div id="toast"></div>
+
 <script>
-const DATA = [{"group": "all", "title": "All Products 全系列", "slug": "all", "items": [{"name": "总统日H7渲染.87", "file": "images/all/all-001.png", "thumb": "thumbs/all/all-001.jpg", "w": 3840, "h": 3415, "kb": 1992}, {"name": "微信图片_20260610174503_49_846", "file": "images/all/all-002.png", "thumb": "thumbs/all/all-002.jpg", "w": 3840, "h": 3362, "kb": 4487}, {"name": "微信图片_20260611092738_50_846", "file": "images/all/all-003.jpg", "thumb": "thumbs/all/all-003.jpg", "w": 3840, "h": 3362, "kb": 922}, {"name": "4Products白底图", "file": "images/all/all-004.png", "thumb": "thumbs/all/all-004.jpg", "w": 3840, "h": 3840, "kb": 2616}, {"name": "微信图片_20260611100241_52_846", "file": "images/all/all-005.png", "thumb": "thumbs/all/all-005.jpg", "w": 3840, "h": 3362, "kb": 3302}, {"name": "微信图片_20260710171301_470_138", "file": "images/all/all-006.png", "thumb": "thumbs/all/all-006.jpg", "w": 2560, "h": 2241, "kb": 3633}, {"name": "微信图片_20260710171300_468_138", "file": "images/all/all-007.png", "thumb": "thumbs/all/all-007.jpg", "w": 2560, "h": 2241, "kb": 3601}, {"name": "微信图片_20260710171301_469_138", "file": "images/all/all-008.png", "thumb": "thumbs/all/all-008.jpg", "w": 2560, "h": 2241, "kb": 2073}, {"name": "微信图片_20260710171302_471_138", "file": "images/all/all-009.png", "thumb": "thumbs/all/all-009.jpg", "w": 2560, "h": 2241, "kb": 3254}, {"name": "微信图片_20260710171303_472_138", "file": "images/all/all-010.png", "thumb": "thumbs/all/all-010.jpg", "w": 2560, "h": 2241, "kb": 3319}, {"name": "微信图片_20260717115449_479_138", "file": "images/all/all-011.png", "thumb": "thumbs/all/all-011.jpg", "w": 3840, "h": 3362, "kb": 4641}, {"name": "ChatGPT Image 2026年7月10日 17_21_43", "file": "images/all/all-012.png", "thumb": "thumbs/all/all-012.jpg", "w": 2305, "h": 4096, "kb": 11436}, {"name": "4Products", "file": "images/all/all-013.png", "thumb": "thumbs/all/all-013.jpg", "w": 3840, "h": 3840, "kb": 14344}, {"name": "按新尺寸生成图片 (1)", "file": "images/all/all-014.png", "thumb": "thumbs/all/all-014.jpg", "w": 4096, "h": 4096, "kb": 22021}, {"name": "ChatGPT Image 2026年6月11日 09_58_48", "file": "images/all/all-015.png", "thumb": "thumbs/all/all-015.jpg", "w": 3840, "h": 2161, "kb": 6511}, {"name": "ChatGPT Image 2026年6月12日 15_48_38", "file": "images/all/all-016.png", "thumb": "thumbs/all/all-016.jpg", "w": 3840, "h": 2161, "kb": 5547}]}, {"group": "XRF Gen2", "title": "XRF Gen2", "slug": "xrf-gen2", "items": [{"name": "OneLaser_XRF_Product_3D_Gen2Render01_EN_v1", "file": "images/xrf-gen2/xrf-gen2-001.png", "thumb": "thumbs/xrf-gen2/xrf-gen2-001.jpg", "w": 3500, "h": 2186, "kb": 3633}, {"name": "OneLaser_XRF_Product_3D_Gen2Render02_EN_v1", "file": "images/xrf-gen2/xrf-gen2-002.png", "thumb": "thumbs/xrf-gen2/xrf-gen2-002.jpg", "w": 3500, "h": 2186, "kb": 4181}, {"name": "OneLaser_XRF_Product_3D_Gen2Render05_EN_v1", "file": "images/xrf-gen2/xrf-gen2-003.png", "thumb": "thumbs/xrf-gen2/xrf-gen2-003.jpg", "w": 3500, "h": 2186, "kb": 3894}, {"name": "OneLaser_XRF_Product_3D_Gen2Render06_EN_v1", "file": "images/xrf-gen2/xrf-gen2-004.png", "thumb": "thumbs/xrf-gen2/xrf-gen2-004.jpg", "w": 3500, "h": 2186, "kb": 5725}, {"name": "OneLaser_XRF_Product_3D_Gen2Render04_EN_v1", "file": "images/xrf-gen2/xrf-gen2-005.png", "thumb": "thumbs/xrf-gen2/xrf-gen2-005.jpg", "w": 3500, "h": 2186, "kb": 4146}, {"name": "44a21cfcf4e49ce2d5fee8e7fa9f73ae_0ab5d2fc-a3b7-4a79-bc96-ceb85a523afa", "file": "images/xrf-gen2/xrf-gen2-006.png", "thumb": "thumbs/xrf-gen2/xrf-gen2-006.jpg", "w": 3892, "h": 3502, "kb": 1568}, {"name": "OneLaser_XRF_Product_3D_Gen2Render03_EN_v1", "file": "images/xrf-gen2/xrf-gen2-007.png", "thumb": "thumbs/xrf-gen2/xrf-gen2-007.jpg", "w": 3500, "h": 2186, "kb": 5315}, {"name": "微信图片_20260709171432_457_138", "file": "images/xrf-gen2/xrf-gen2-008.png", "thumb": "thumbs/xrf-gen2/xrf-gen2-008.jpg", "w": 2560, "h": 1599, "kb": 2707}, {"name": "微信图片_20260709170451_455_138", "file": "images/xrf-gen2/xrf-gen2-009.png", "thumb": "thumbs/xrf-gen2/xrf-gen2-009.jpg", "w": 2560, "h": 1599, "kb": 1143}, {"name": "微信图片_20260709170451_456_138", "file": "images/xrf-gen2/xrf-gen2-010.png", "thumb": "thumbs/xrf-gen2/xrf-gen2-010.jpg", "w": 2560, "h": 1599, "kb": 1746}, {"name": "839d9e84510a0900681b9fc541852466", "file": "images/xrf-gen2/xrf-gen2-011.png", "thumb": "thumbs/xrf-gen2/xrf-gen2-011.jpg", "w": 1066, "h": 600, "kb": 81}, {"name": "OneLaser_XRFGen2_Product_3D_Render07_EN_v1", "file": "images/xrf-gen2/xrf-gen2-012.png", "thumb": "thumbs/xrf-gen2/xrf-gen2-012.jpg", "w": 3500, "h": 2186, "kb": 16743}, {"name": "OneLaser_XRFGen2_Product_3D_Render08_EN_v1", "file": "images/xrf-gen2/xrf-gen2-013.png", "thumb": "thumbs/xrf-gen2/xrf-gen2-013.jpg", "w": 2560, "h": 1599, "kb": 7067}, {"name": "OneLaser_XRFGen2_Product_3D_Render09_EN_v1", "file": "images/xrf-gen2/xrf-gen2-014.png", "thumb": "thumbs/xrf-gen2/xrf-gen2-014.jpg", "w": 2560, "h": 1599, "kb": 5609}, {"name": "OneLaser_XRFGen2_Product_3D_Render10_EN_v1", "file": "images/xrf-gen2/xrf-gen2-015.png", "thumb": "thumbs/xrf-gen2/xrf-gen2-015.jpg", "w": 2560, "h": 1599, "kb": 9854}, {"name": "OneLaser_XRFGen2_Product_3D_Render11_EN_v1", "file": "images/xrf-gen2/xrf-gen2-016.png", "thumb": "thumbs/xrf-gen2/xrf-gen2-016.jpg", "w": 2560, "h": 1599, "kb": 7302}, {"name": "OneLaser_XRFGen2_Product_3D_Render12_EN_v1", "file": "images/xrf-gen2/xrf-gen2-017.png", "thumb": "thumbs/xrf-gen2/xrf-gen2-017.jpg", "w": 2560, "h": 1599, "kb": 8247}, {"name": "OneLaser_XRFGen2_Product_3D_Render11_EN_v1 1", "file": "images/xrf-gen2/xrf-gen2-018.png", "thumb": "thumbs/xrf-gen2/xrf-gen2-018.jpg", "w": 1523, "h": 951, "kb": 1366}, {"name": "OneLaser_XRFGen2_Product_3D_Render12_EN_v1 1", "file": "images/xrf-gen2/xrf-gen2-019.png", "thumb": "thumbs/xrf-gen2/xrf-gen2-019.jpg", "w": 1522, "h": 951, "kb": 1540}, {"name": "iwEcAqNwbmcDAQTRAeEF0QMhBrBOMlxiWl3kWwofPhtGYIsAB9MAAAABATljxAgACaJpbQoAC9F6HA", "file": "images/xrf-gen2/xrf-gen2-020.png", "thumb": "thumbs/xrf-gen2/xrf-gen2-020.jpg", "w": 481, "h": 801, "kb": 30}, {"name": "OneLaser_XRFGen2_Product_3D_Render12_EN_v1 1", "file": "images/xrf-gen2/xrf-gen2-021.png", "thumb": "thumbs/xrf-gen2/xrf-gen2-021.jpg", "w": 1522, "h": 951, "kb": 1545}, {"name": "iwEcAqNwbmcDAQTRAeAF0QMdBrDXr2eTXo6h0QofPhtDxdEAB9MAAAABATljxAgACaJpbQoAC9IAAJCL", "file": "images/xrf-gen2/xrf-gen2-022.png", "thumb": "thumbs/xrf-gen2/xrf-gen2-022.jpg", "w": 480, "h": 797, "kb": 36}, {"name": "ChatGPT Image 2026年7月6日 15_42_26", "file": "images/xrf-gen2/xrf-gen2-023.png", "thumb": "thumbs/xrf-gen2/xrf-gen2-023.jpg", "w": 2876, "h": 4096, "kb": 11414}, {"name": "ChatGPT Image 2026年6月24日 17_46_10 (2) (1)", "file": "images/xrf-gen2/xrf-gen2-024.png", "thumb": "thumbs/xrf-gen2/xrf-gen2-024.jpg", "w": 2098, "h": 2965, "kb": 6195}]}, {"group": "XRF", "title": "XRF", "slug": "xrf", "items": [{"name": "XRF3", "file": "images/xrf/xrf-001.jpg", "thumb": "thumbs/xrf/xrf-001.jpg", "w": 1200, "h": 1200, "kb": 80}, {"name": "image", "file": "images/xrf/xrf-002.png", "thumb": "thumbs/xrf/xrf-002.jpg", "w": 1980, "h": 1236, "kb": 90}, {"name": "image（1）", "file": "images/xrf/xrf-003.png", "thumb": "thumbs/xrf/xrf-003.jpg", "w": 1980, "h": 1236, "kb": 160}, {"name": "image（2）", "file": "images/xrf/xrf-004.png", "thumb": "thumbs/xrf/xrf-004.jpg", "w": 1980, "h": 1238, "kb": 162}, {"name": "image（2）", "file": "images/xrf/xrf-005.png", "thumb": "thumbs/xrf/xrf-005.jpg", "w": 1434, "h": 895, "kb": 103}, {"name": "0cf05b927e333c9ddffe5b4072c4b5a1", "file": "images/xrf/xrf-006.png", "thumb": "thumbs/xrf/xrf-006.jpg", "w": 2178, "h": 1361, "kb": 896}, {"name": "image", "file": "images/xrf/xrf-007.png", "thumb": "thumbs/xrf/xrf-007.jpg", "w": 1526, "h": 1373, "kb": 538}, {"name": "de37b89da279929ef72035aab9268049", "file": "images/xrf/xrf-008.png", "thumb": "thumbs/xrf/xrf-008.jpg", "w": 1946, "h": 1095, "kb": 610}, {"name": "image（4）", "file": "images/xrf/xrf-009.png", "thumb": "thumbs/xrf/xrf-009.jpg", "w": 990, "h": 619, "kb": 187}, {"name": "image（5）", "file": "images/xrf/xrf-010.png", "thumb": "thumbs/xrf/xrf-010.jpg", "w": 1980, "h": 1782, "kb": 326}, {"name": "fddf901a387dd70a51552a0568ece86d_926fba2b-73e0-4d2a-9f1c-b413173bc4f5(2)", "file": "images/xrf/xrf-011.png", "thumb": "thumbs/xrf/xrf-011.jpg", "w": 1487, "h": 929, "kb": 392}, {"name": "image（6）", "file": "images/xrf/xrf-012.png", "thumb": "thumbs/xrf/xrf-012.jpg", "w": 1980, "h": 1782, "kb": 428}, {"name": "XRF-ChatGPT Image 2026年5月6日 16_35_33", "file": "images/xrf/xrf-013.png", "thumb": "thumbs/xrf/xrf-013.jpg", "w": 3840, "h": 1918, "kb": 3811}, {"name": "ChatGPT Image 2026年5月15日 11_01_43", "file": "images/xrf/xrf-014.png", "thumb": "thumbs/xrf/xrf-014.jpg", "w": 3515, "h": 1754, "kb": 4370}, {"name": "XRF-ChatGPT Image 2026年5月6日 16_35_22", "file": "images/xrf/xrf-015.png", "thumb": "thumbs/xrf/xrf-015.jpg", "w": 2479, "h": 1395, "kb": 4085}, {"name": "XRF带基座jimeng-2025-12-02-3541-超写实3D渲染，电影级布光（暖调环境光+局部冷光点缀），中景视角、居中构图；场景_", "file": "images/xrf/xrf-016.png", "thumb": "thumbs/xrf/xrf-016.jpg", "w": 2170, "h": 1218, "kb": 3028}, {"name": "XRFjimeng-2025-12-26-7701-在一间美式车库workshop里，浅棕色的木质工作台上摆着一台ONELASER_", "file": "images/xrf/xrf-017.png", "thumb": "thumbs/xrf/xrf-017.jpg", "w": 3836, "h": 1644, "kb": 7151}, {"name": "Education教学实验室激光雕刻作品场景", "file": "images/xrf/xrf-018.png", "thumb": "thumbs/xrf/xrf-018.jpg", "w": 2752, "h": 1536, "kb": 5844}, {"name": "Gemini_Generated_Image_fhnpb4fhnpb4fhnp", "file": "images/xrf/xrf-019.png", "thumb": "thumbs/xrf/xrf-019.jpg", "w": 1920, "h": 1280, "kb": 3730}, {"name": "image", "file": "images/xrf/xrf-020.png", "thumb": "thumbs/xrf/xrf-020.jpg", "w": 3906, "h": 1660, "kb": 8142}, {"name": "ChatGPT Image 2026年5月15日 11_01_43 1", "file": "images/xrf/xrf-021.png", "thumb": "thumbs/xrf/xrf-021.jpg", "w": 4096, "h": 2018, "kb": 7713}, {"name": "ChatGPT Image 2026年7月6日 17_38_53", "file": "images/xrf/xrf-022.png", "thumb": "thumbs/xrf/xrf-022.jpg", "w": 1536, "h": 1024, "kb": 1891}]}, {"group": "VertiGo", "title": "VertiGo", "slug": "vertigo", "items": [{"name": "VertiGo2", "file": "images/vertigo/vertigo-001.png", "thumb": "thumbs/vertigo/vertigo-001.jpg", "w": 4096, "h": 3642, "kb": 3074}, {"name": "VertiGo1", "file": "images/vertigo/vertigo-002.png", "thumb": "thumbs/vertigo/vertigo-002.jpg", "w": 4096, "h": 3642, "kb": 2653}, {"name": "VertiGo3", "file": "images/vertigo/vertigo-003.png", "thumb": "thumbs/vertigo/vertigo-003.jpg", "w": 4096, "h": 3642, "kb": 1788}, {"name": "VertiGo4", "file": "images/vertigo/vertigo-004.png", "thumb": "thumbs/vertigo/vertigo-004.jpg", "w": 4096, "h": 3642, "kb": 3082}, {"name": "VertiGo5", "file": "images/vertigo/vertigo-005.png", "thumb": "thumbs/vertigo/vertigo-005.jpg", "w": 4096, "h": 3642, "kb": 2690}, {"name": "VertiGo6", "file": "images/vertigo/vertigo-006.png", "thumb": "thumbs/vertigo/vertigo-006.jpg", "w": 4096, "h": 3642, "kb": 1713}, {"name": "VertiGo7", "file": "images/vertigo/vertigo-007.png", "thumb": "thumbs/vertigo/vertigo-007.jpg", "w": 4096, "h": 3642, "kb": 2760}, {"name": "VertiGo8", "file": "images/vertigo/vertigo-008.png", "thumb": "thumbs/vertigo/vertigo-008.jpg", "w": 4096, "h": 3642, "kb": 3060}, {"name": "开盖", "file": "images/vertigo/vertigo-009.png", "thumb": "thumbs/vertigo/vertigo-009.jpg", "w": 4096, "h": 3642, "kb": 4942}, {"name": "Rectangle 763", "file": "images/vertigo/vertigo-010.png", "thumb": "thumbs/vertigo/vertigo-010.jpg", "w": 2974, "h": 1394, "kb": 4543}, {"name": "分组 13", "file": "images/vertigo/vertigo-011.png", "thumb": "thumbs/vertigo/vertigo-011.jpg", "w": 2100, "h": 1211, "kb": 2003}, {"name": "画板 1 4", "file": "images/vertigo/vertigo-012.png", "thumb": "thumbs/vertigo/vertigo-012.jpg", "w": 3840, "h": 1800, "kb": 6232}, {"name": "12image", "file": "images/vertigo/vertigo-013.png", "thumb": "thumbs/vertigo/vertigo-013.jpg", "w": 2256, "h": 1410, "kb": 1346}, {"name": "Rectangle 818", "file": "images/vertigo/vertigo-014.png", "thumb": "thumbs/vertigo/vertigo-014.jpg", "w": 3840, "h": 1444, "kb": 1574}, {"name": "quality_restoration_20251006104146110", "file": "images/vertigo/vertigo-015.png", "thumb": "thumbs/vertigo/vertigo-015.jpg", "w": 3840, "h": 2196, "kb": 9738}, {"name": "VertiGoGemini_Generated_Image_j2jwuvj2jwuvj2jw", "file": "images/vertigo/vertigo-016.png", "thumb": "thumbs/vertigo/vertigo-016.jpg", "w": 1920, "h": 1097, "kb": 2531}, {"name": "image", "file": "images/vertigo/vertigo-017.png", "thumb": "thumbs/vertigo/vertigo-017.jpg", "w": 3526, "h": 1620, "kb": 7092}]}, {"group": "Hydra Gen2", "title": "Hydra Gen2", "slug": "hydra-gen2", "items": [{"name": "Hydra 7 Gen2 正面渲染", "file": "images/hydra-gen2/hydra-gen2-7-001.png", "thumb": "thumbs/hydra-gen2/hydra-gen2-7-001.jpg", "w": 2400, "h": 1650, "kb": 1341, "model": 7}, {"name": "Hydra 9 Gen2 正面渲染", "file": "images/hydra-gen2/hydra-gen2-9-001.png", "thumb": "thumbs/hydra-gen2/hydra-gen2-9-001.jpg", "w": 2400, "h": 1650, "kb": 1399, "model": 9}, {"name": "Hydra 13 Gen2 正面渲染", "file": "images/hydra-gen2/hydra-gen2-13-001.png", "thumb": "thumbs/hydra-gen2/hydra-gen2-13-001.jpg", "w": 2400, "h": 1650, "kb": 1740, "model": 13}, {"name": "Hydra 16 Gen2 正面渲染", "file": "images/hydra-gen2/hydra-gen2-16-001.png", "thumb": "thumbs/hydra-gen2/hydra-gen2-16-001.jpg", "w": 2400, "h": 1650, "kb": 1568, "model": 16}, {"name": "Hydra  7", "file": "images/hydra-gen2/hydra-gen2-7-002.png", "thumb": "thumbs/hydra-gen2/hydra-gen2-7-002.jpg", "w": 1500, "h": 1500, "kb": 628, "model": 7}, {"name": "Hydra  7 拷贝", "file": "images/hydra-gen2/hydra-gen2-7-003.png", "thumb": "thumbs/hydra-gen2/hydra-gen2-7-003.jpg", "w": 1500, "h": 1500, "kb": 925, "model": 7}, {"name": "7", "file": "images/hydra-gen2/hydra-gen2-7-004.jpg", "thumb": "thumbs/hydra-gen2/hydra-gen2-7-004.jpg", "w": 2560, "h": 2276, "kb": 581, "model": 7}, {"name": "微信图片_20260916173924_54_277", "file": "images/hydra-gen2/hydra-gen2-9-002.png", "thumb": "thumbs/hydra-gen2/hydra-gen2-9-002.jpg", "w": 2560, "h": 2276, "kb": 3042, "model": 9}, {"name": "HydraGen2渲染.48", "file": "images/hydra-gen2/hydra-gen2-9-003.png", "thumb": "thumbs/hydra-gen2/hydra-gen2-9-003.jpg", "w": 3840, "h": 3413, "kb": 7409, "model": 9}, {"name": "Hydra Gen2-9-1100x678-1", "file": "images/hydra-gen2/hydra-gen2-9-004.png", "thumb": "thumbs/hydra-gen2/hydra-gen2-9-004.jpg", "w": 1100, "h": 678, "kb": 359, "model": 9}, {"name": "Hydra Gen2-9-1100x678-2", "file": "images/hydra-gen2/hydra-gen2-9-005.png", "thumb": "thumbs/hydra-gen2/hydra-gen2-9-005.jpg", "w": 1100, "h": 678, "kb": 303, "model": 9}, {"name": "9", "file": "images/hydra-gen2/hydra-gen2-9-006.jpg", "thumb": "thumbs/hydra-gen2/hydra-gen2-9-006.jpg", "w": 2560, "h": 2276, "kb": 570, "model": 9}, {"name": "9-2", "file": "images/hydra-gen2/hydra-gen2-9-007.jpg", "thumb": "thumbs/hydra-gen2/hydra-gen2-9-007.jpg", "w": 2560, "h": 2276, "kb": 432, "model": 9}, {"name": "Hydra  9", "file": "images/hydra-gen2/hydra-gen2-9-008.png", "thumb": "thumbs/hydra-gen2/hydra-gen2-9-008.jpg", "w": 1500, "h": 1500, "kb": 710, "model": 9}, {"name": "13", "file": "images/hydra-gen2/hydra-gen2-13-002.jpg", "thumb": "thumbs/hydra-gen2/hydra-gen2-13-002.jpg", "w": 2560, "h": 2276, "kb": 729, "model": 13}, {"name": "Hydra  13 拷贝", "file": "images/hydra-gen2/hydra-gen2-13-003.png", "thumb": "thumbs/hydra-gen2/hydra-gen2-13-003.jpg", "w": 1500, "h": 1500, "kb": 1030, "model": 13}, {"name": "Hydra  13", "file": "images/hydra-gen2/hydra-gen2-13-004.png", "thumb": "thumbs/hydra-gen2/hydra-gen2-13-004.jpg", "w": 1500, "h": 1500, "kb": 691, "model": 13}, {"name": "image", "file": "images/hydra-gen2/hydra-gen2-13-005.png", "thumb": "thumbs/hydra-gen2/hydra-gen2-13-005.jpg", "w": 1346, "h": 1346, "kb": 370, "model": 13}, {"name": "Hydra Gen2-16-1100x678-1", "file": "images/hydra-gen2/hydra-gen2-16-002.png", "thumb": "thumbs/hydra-gen2/hydra-gen2-16-002.jpg", "w": 1100, "h": 678, "kb": 261, "model": 16}, {"name": "Hydra Gen2-16-1100x678-2", "file": "images/hydra-gen2/hydra-gen2-16-003.png", "thumb": "thumbs/hydra-gen2/hydra-gen2-16-003.jpg", "w": 1100, "h": 678, "kb": 302, "model": 16}, {"name": "Hydra Gen2-16-1100x978", "file": "images/hydra-gen2/hydra-gen2-16-004.png", "thumb": "thumbs/hydra-gen2/hydra-gen2-16-004.jpg", "w": 1100, "h": 978, "kb": 436, "model": 16}, {"name": "16", "file": "images/hydra-gen2/hydra-gen2-16-005.jpg", "thumb": "thumbs/hydra-gen2/hydra-gen2-16-005.jpg", "w": 2560, "h": 2304, "kb": 608, "model": 16}, {"name": "Hydra 16", "file": "images/hydra-gen2/hydra-gen2-16-006.jpg", "thumb": "thumbs/hydra-gen2/hydra-gen2-16-006.jpg", "w": 1500, "h": 1500, "kb": 282, "model": 16}, {"name": "Hydra 16 拷贝", "file": "images/hydra-gen2/hydra-gen2-16-007.png", "thumb": "thumbs/hydra-gen2/hydra-gen2-16-007.jpg", "w": 1500, "h": 1500, "kb": 954, "model": 16}, {"name": "Product_Hdyra9Gen2_2026Q2_1", "file": "images/hydra-gen2/hydra-gen2-9-009.png", "thumb": "thumbs/hydra-gen2/hydra-gen2-9-009.jpg", "w": 3840, "h": 1801, "kb": 9018, "model": 9}, {"name": "Hydra-Gen2-Gemini_Generated_Image_lh4b7vlh4b7vlh4b", "file": "images/hydra-gen2/hydra-gen2-001.png", "thumb": "thumbs/hydra-gen2/hydra-gen2-001.jpg", "w": 3168, "h": 1344, "kb": 7287}, {"name": "按新尺寸生成图片 (1)", "file": "images/hydra-gen2/hydra-gen2-9-010.png", "thumb": "thumbs/hydra-gen2/hydra-gen2-9-010.jpg", "w": 1920, "h": 1080, "kb": 1906, "model": 9}, {"name": "Hydra9场景图jimeng-2025-12-08-8731-电商风格，超写实3D渲染，电影级暗调氛围，低平视视角。场景为美国工业风家庭车库：_", "file": "images/hydra-gen2/hydra-gen2-9-011.png", "thumb": "thumbs/hydra-gen2/hydra-gen2-9-011.jpg", "w": 3625, "h": 2039, "kb": 6220, "model": 9}, {"name": "ChatGPT Image 2026年7月7日 10_20_22", "file": "images/hydra-gen2/hydra-gen2-002.png", "thumb": "thumbs/hydra-gen2/hydra-gen2-002.jpg", "w": 3102, "h": 4096, "kb": 20549}, {"name": "878fa8e67dfa81609b52de94a1bfcdb4", "file": "images/hydra-gen2/hydra-gen2-9-012.png", "thumb": "thumbs/hydra-gen2/hydra-gen2-9-012.jpg", "w": 1920, "h": 1707, "kb": 1448, "model": 9}, {"name": "微信图片_20260917150855_64_277", "file": "images/hydra-gen2/hydra-gen2-003.jpg", "thumb": "thumbs/hydra-gen2/hydra-gen2-003.jpg", "w": 2560, "h": 2276, "kb": 1636}, {"name": "微信图片_20260917150857_65_277", "file": "images/hydra-gen2/hydra-gen2-004.png", "thumb": "thumbs/hydra-gen2/hydra-gen2-004.jpg", "w": 2560, "h": 2276, "kb": 4655}, {"name": "微信图片_20260917153528_66_277", "file": "images/hydra-gen2/hydra-gen2-005.png", "thumb": "thumbs/hydra-gen2/hydra-gen2-005.jpg", "w": 2560, "h": 2276, "kb": 8456}, {"name": "微信图片_20260917154003_67_277", "file": "images/hydra-gen2/hydra-gen2-9-013.png", "thumb": "thumbs/hydra-gen2/hydra-gen2-9-013.jpg", "w": 2560, "h": 2276, "kb": 3617, "model": 9}, {"name": "微信图片_20260917154916_68_277", "file": "images/hydra-gen2/hydra-gen2-9-014.png", "thumb": "thumbs/hydra-gen2/hydra-gen2-9-014.jpg", "w": 2560, "h": 2276, "kb": 3544, "model": 9}], "modelFilters": [7, 9, 13, 16]}, {"group": "Cobra", "title": "Cobra", "slug": "cobra", "items": [{"name": "Cobra 8 正面渲染", "file": "images/cobra/cobra-8-001.png", "thumb": "thumbs/cobra/cobra-8-001.jpg", "w": 2400, "h": 1650, "kb": 1378, "model": 8}, {"name": "Cobra 10 正面渲染", "file": "images/cobra/cobra-10-001.png", "thumb": "thumbs/cobra/cobra-10-001.jpg", "w": 2400, "h": 1650, "kb": 1739, "model": 10}, {"name": "Cobra 14 正面渲染", "file": "images/cobra/cobra-14-001.png", "thumb": "thumbs/cobra/cobra-14-001.jpg", "w": 2400, "h": 1650, "kb": 1717, "model": 14}, {"name": "image", "file": "images/cobra/cobra-8-002.png", "thumb": "thumbs/cobra/cobra-8-002.jpg", "w": 1200, "h": 1200, "kb": 259, "model": 8}, {"name": "image", "file": "images/cobra/cobra-8-003.png", "thumb": "thumbs/cobra/cobra-8-003.jpg", "w": 1320, "h": 1320, "kb": 357, "model": 8}, {"name": "image", "file": "images/cobra/cobra-8-004.png", "thumb": "thumbs/cobra/cobra-8-004.jpg", "w": 1320, "h": 1320, "kb": 337, "model": 8}, {"name": "Cobra 8 早期渲染（旧标 7，俯视）", "file": "images/cobra/cobra-001.png", "thumb": "thumbs/cobra/cobra-001.jpg", "w": 4000, "h": 3500, "kb": 3386}, {"name": "Cobra 8 早期渲染（旧标 7，正面）", "file": "images/cobra/cobra-002.png", "thumb": "thumbs/cobra/cobra-002.jpg", "w": 4000, "h": 3500, "kb": 2430}, {"name": "Cobra10渲染.60", "file": "images/cobra/cobra-10-002.png", "thumb": "thumbs/cobra/cobra-10-002.jpg", "w": 4000, "h": 3500, "kb": 3860, "model": 10}, {"name": "Cobra10渲染.63", "file": "images/cobra/cobra-10-003.png", "thumb": "thumbs/cobra/cobra-10-003.jpg", "w": 4000, "h": 3500, "kb": 3714, "model": 10}, {"name": "Cobra 10-2", "file": "images/cobra/cobra-10-004.png", "thumb": "thumbs/cobra/cobra-10-004.jpg", "w": 1320, "h": 1320, "kb": 135, "model": 10}, {"name": "Cobra 10-3", "file": "images/cobra/cobra-10-005.png", "thumb": "thumbs/cobra/cobra-10-005.jpg", "w": 1320, "h": 1320, "kb": 116, "model": 10}, {"name": "image", "file": "images/cobra/cobra-10-006.png", "thumb": "thumbs/cobra/cobra-10-006.jpg", "w": 1200, "h": 1200, "kb": 291, "model": 10}, {"name": "b1ee2e718a29c2d35ada9e6e1209528d", "file": "images/cobra/cobra-10-007.png", "thumb": "thumbs/cobra/cobra-10-007.jpg", "w": 2560, "h": 2240, "kb": 1111, "model": 10}, {"name": "Cobra10渲染.67", "file": "images/cobra/cobra-10-008.png", "thumb": "thumbs/cobra/cobra-10-008.jpg", "w": 4000, "h": 3500, "kb": 3050, "model": 10}, {"name": "cobra10-烟", "file": "images/cobra/cobra-10-009.jpg", "thumb": "thumbs/cobra/cobra-10-009.jpg", "w": 3840, "h": 3360, "kb": 1143, "model": 10}, {"name": "Cobra14渲染.bip.68", "file": "images/cobra/cobra-14-002.png", "thumb": "thumbs/cobra/cobra-14-002.jpg", "w": 3840, "h": 2879, "kb": 3791, "model": 14}, {"name": "Cobra14渲染.bip.70", "file": "images/cobra/cobra-14-003.png", "thumb": "thumbs/cobra/cobra-14-003.jpg", "w": 3840, "h": 2879, "kb": 3442, "model": 14}, {"name": "Cobra14渲染.bip.89", "file": "images/cobra/cobra-14-004.png", "thumb": "thumbs/cobra/cobra-14-004.jpg", "w": 3840, "h": 2879, "kb": 3336, "model": 14}, {"name": "Cobra14渲染.bip.69", "file": "images/cobra/cobra-14-005.png", "thumb": "thumbs/cobra/cobra-14-005.jpg", "w": 3840, "h": 2879, "kb": 3848, "model": 14}, {"name": "Cobra14渲染.bip.71", "file": "images/cobra/cobra-14-006.png", "thumb": "thumbs/cobra/cobra-14-006.jpg", "w": 3840, "h": 2879, "kb": 3329, "model": 14}, {"name": "Cobra14渲染.bip.84", "file": "images/cobra/cobra-14-007.png", "thumb": "thumbs/cobra/cobra-14-007.jpg", "w": 2560, "h": 1919, "kb": 1743, "model": 14}, {"name": "Cobra14渲染.bip.76", "file": "images/cobra/cobra-14-008.png", "thumb": "thumbs/cobra/cobra-14-008.jpg", "w": 3840, "h": 2879, "kb": 1799, "model": 14}, {"name": "Cobra系列Banner 1", "file": "images/cobra/cobra-003.png", "thumb": "thumbs/cobra/cobra-003.jpg", "w": 1920, "h": 900, "kb": 300}, {"name": "image", "file": "images/cobra/cobra-10-010.png", "thumb": "thumbs/cobra/cobra-10-010.jpg", "w": 2137, "h": 1109, "kb": 1841, "model": 10}], "modelFilters": [8, 10, 14]}, {"group": "Viper", "title": "Viper", "slug": "viper", "items": [{"name": "右侧-下降", "file": "images/viper/viper-001.png", "thumb": "thumbs/viper/viper-001.jpg", "w": 4096, "h": 3642, "kb": 2329}, {"name": "右侧-门盖上升", "file": "images/viper/viper-002.png", "thumb": "thumbs/viper/viper-002.jpg", "w": 4096, "h": 3642, "kb": 2574}, {"name": "右侧", "file": "images/viper/viper-003.png", "thumb": "thumbs/viper/viper-003.jpg", "w": 4096, "h": 3642, "kb": 2416}, {"name": "正视-上升", "file": "images/viper/viper-004.png", "thumb": "thumbs/viper/viper-004.jpg", "w": 4096, "h": 3642, "kb": 1696}, {"name": "正视", "file": "images/viper/viper-005.png", "thumb": "thumbs/viper/viper-005.jpg", "w": 4096, "h": 3642, "kb": 1282}, {"name": "右侧视-取下操作屏", "file": "images/viper/viper-006.png", "thumb": "thumbs/viper/viper-006.jpg", "w": 4096, "h": 3642, "kb": 2492}, {"name": "左侧", "file": "images/viper/viper-007.png", "thumb": "thumbs/viper/viper-007.jpg", "w": 4096, "h": 3642, "kb": 2244}, {"name": "左俯视-上升", "file": "images/viper/viper-008.png", "thumb": "thumbs/viper/viper-008.jpg", "w": 4096, "h": 3642, "kb": 2695}, {"name": "右侧-门盖上升 1", "file": "images/viper/viper-009.png", "thumb": "thumbs/viper/viper-009.jpg", "w": 1627, "h": 1447, "kb": 492}, {"name": "banner", "file": "images/viper/viper-010.png", "thumb": "thumbs/viper/viper-010.jpg", "w": 4096, "h": 1914, "kb": 9005}, {"name": "Rectangle", "file": "images/viper/viper-011.png", "thumb": "thumbs/viper/viper-011.jpg", "w": 4096, "h": 1673, "kb": 11161}, {"name": "Rectangle", "file": "images/viper/viper-012.png", "thumb": "thumbs/viper/viper-012.jpg", "w": 4096, "h": 1915, "kb": 8874}, {"name": "image", "file": "images/viper/viper-013.png", "thumb": "thumbs/viper/viper-013.jpg", "w": 4096, "h": 2298, "kb": 8859}]}, {"group": "YRF", "title": "YRF", "slug": "yrf", "items": [{"name": "微信图片_20260709160300_450_138", "file": "images/yrf/yrf-001.png", "thumb": "thumbs/yrf/yrf-001.jpg", "w": 2560, "h": 1698, "kb": 1613}, {"name": "微信图片_20260709160300_451_138", "file": "images/yrf/yrf-002.png", "thumb": "thumbs/yrf/yrf-002.jpg", "w": 2560, "h": 1698, "kb": 1317}, {"name": "微信图片_20260709160302_453_138", "file": "images/yrf/yrf-003.png", "thumb": "thumbs/yrf/yrf-003.jpg", "w": 2560, "h": 1698, "kb": 2062}, {"name": "微信图片_20260709160303_454_138", "file": "images/yrf/yrf-004.png", "thumb": "thumbs/yrf/yrf-004.jpg", "w": 2560, "h": 1698, "kb": 2092}, {"name": "微信图片_20260709160301_452_138", "file": "images/yrf/yrf-005.png", "thumb": "thumbs/yrf/yrf-005.jpg", "w": 2560, "h": 1698, "kb": 6940}]}, {"group": "Galvo Flex", "title": "Galvo Flex", "slug": "galvo-flex", "items": [{"name": "后侧", "file": "images/galvo-flex/galvo-flex-001.png", "thumb": "thumbs/galvo-flex/galvo-flex-001.jpg", "w": 3840, "h": 3362, "kb": 5236}, {"name": "5W UV＋", "file": "images/galvo-flex/galvo-flex-002.png", "thumb": "thumbs/galvo-flex/galvo-flex-002.jpg", "w": 2358, "h": 2007, "kb": 1114}, {"name": "后视", "file": "images/galvo-flex/galvo-flex-003.png", "thumb": "thumbs/galvo-flex/galvo-flex-003.jpg", "w": 3840, "h": 3362, "kb": 3104}, {"name": "右视", "file": "images/galvo-flex/galvo-flex-004.png", "thumb": "thumbs/galvo-flex/galvo-flex-004.jpg", "w": 3840, "h": 3362, "kb": 3973}, {"name": "正视", "file": "images/galvo-flex/galvo-flex-005.png", "thumb": "thumbs/galvo-flex/galvo-flex-005.jpg", "w": 3840, "h": 3362, "kb": 2643}, {"name": "正右视", "file": "images/galvo-flex/galvo-flex-006.png", "thumb": "thumbs/galvo-flex/galvo-flex-006.jpg", "w": 3840, "h": 3362, "kb": 2856}, {"name": "左侧", "file": "images/galvo-flex/galvo-flex-007.png", "thumb": "thumbs/galvo-flex/galvo-flex-007.jpg", "w": 3840, "h": 3362, "kb": 3734}, {"name": "左视", "file": "images/galvo-flex/galvo-flex-008.png", "thumb": "thumbs/galvo-flex/galvo-flex-008.jpg", "w": 3840, "h": 3362, "kb": 5711}, {"name": "右侧", "file": "images/galvo-flex/galvo-flex-009.png", "thumb": "thumbs/galvo-flex/galvo-flex-009.jpg", "w": 3840, "h": 3362, "kb": 4021}, {"name": "右俯视", "file": "images/galvo-flex/galvo-flex-010.png", "thumb": "thumbs/galvo-flex/galvo-flex-010.jpg", "w": 3840, "h": 3362, "kb": 4987}, {"name": "正视", "file": "images/galvo-flex/galvo-flex-011.png", "thumb": "thumbs/galvo-flex/galvo-flex-011.jpg", "w": 3840, "h": 3362, "kb": 2326}, {"name": "后视", "file": "images/galvo-flex/galvo-flex-012.png", "thumb": "thumbs/galvo-flex/galvo-flex-012.jpg", "w": 3840, "h": 3362, "kb": 3633}, {"name": "正右侧", "file": "images/galvo-flex/galvo-flex-013.png", "thumb": "thumbs/galvo-flex/galvo-flex-013.jpg", "w": 3840, "h": 3362, "kb": 2627}, {"name": "侧后视", "file": "images/galvo-flex/galvo-flex-014.png", "thumb": "thumbs/galvo-flex/galvo-flex-014.jpg", "w": 3840, "h": 3362, "kb": 4834}, {"name": "左侧", "file": "images/galvo-flex/galvo-flex-015.png", "thumb": "thumbs/galvo-flex/galvo-flex-015.jpg", "w": 3840, "h": 3362, "kb": 4097}, {"name": "侧后", "file": "images/galvo-flex/galvo-flex-016.png", "thumb": "thumbs/galvo-flex/galvo-flex-016.jpg", "w": 3840, "h": 3362, "kb": 4855}, {"name": "右侧", "file": "images/galvo-flex/galvo-flex-017.png", "thumb": "thumbs/galvo-flex/galvo-flex-017.jpg", "w": 3840, "h": 3362, "kb": 3603}, {"name": "右俯视", "file": "images/galvo-flex/galvo-flex-018.png", "thumb": "thumbs/galvo-flex/galvo-flex-018.jpg", "w": 3840, "h": 3362, "kb": 4781}, {"name": "正后视", "file": "images/galvo-flex/galvo-flex-019.png", "thumb": "thumbs/galvo-flex/galvo-flex-019.jpg", "w": 3840, "h": 3362, "kb": 3604}, {"name": "正视", "file": "images/galvo-flex/galvo-flex-020.png", "thumb": "thumbs/galvo-flex/galvo-flex-020.jpg", "w": 3840, "h": 3362, "kb": 2258}, {"name": "正右视", "file": "images/galvo-flex/galvo-flex-021.png", "thumb": "thumbs/galvo-flex/galvo-flex-021.jpg", "w": 3840, "h": 3362, "kb": 2848}, {"name": "左侧", "file": "images/galvo-flex/galvo-flex-022.png", "thumb": "thumbs/galvo-flex/galvo-flex-022.jpg", "w": 3840, "h": 3362, "kb": 4425}, {"name": "仰角雕刻状态", "file": "images/galvo-flex/galvo-flex-023.png", "thumb": "thumbs/galvo-flex/galvo-flex-023.jpg", "w": 3840, "h": 3362, "kb": 3240}, {"name": "右侧", "file": "images/galvo-flex/galvo-flex-024.png", "thumb": "thumbs/galvo-flex/galvo-flex-024.jpg", "w": 3840, "h": 3362, "kb": 4015}, {"name": "右俯视", "file": "images/galvo-flex/galvo-flex-025.png", "thumb": "thumbs/galvo-flex/galvo-flex-025.jpg", "w": 3840, "h": 3362, "kb": 4117}, {"name": "image", "file": "images/galvo-flex/galvo-flex-026.png", "thumb": "thumbs/galvo-flex/galvo-flex-026.jpg", "w": 1032, "h": 204, "kb": 60}, {"name": "后侧", "file": "images/galvo-flex/galvo-flex-027.png", "thumb": "thumbs/galvo-flex/galvo-flex-027.jpg", "w": 3840, "h": 3362, "kb": 5568}, {"name": "后视", "file": "images/galvo-flex/galvo-flex-028.png", "thumb": "thumbs/galvo-flex/galvo-flex-028.jpg", "w": 3840, "h": 3362, "kb": 4966}, {"name": "右侧", "file": "images/galvo-flex/galvo-flex-029.png", "thumb": "thumbs/galvo-flex/galvo-flex-029.jpg", "w": 3840, "h": 3362, "kb": 4611}, {"name": "右俯视", "file": "images/galvo-flex/galvo-flex-030.png", "thumb": "thumbs/galvo-flex/galvo-flex-030.jpg", "w": 3840, "h": 3362, "kb": 4538}, {"name": "右视", "file": "images/galvo-flex/galvo-flex-031.png", "thumb": "thumbs/galvo-flex/galvo-flex-031.jpg", "w": 3840, "h": 3362, "kb": 3894}, {"name": "正视", "file": "images/galvo-flex/galvo-flex-032.png", "thumb": "thumbs/galvo-flex/galvo-flex-032.jpg", "w": 3840, "h": 3362, "kb": 3036}, {"name": "左侧", "file": "images/galvo-flex/galvo-flex-033.png", "thumb": "thumbs/galvo-flex/galvo-flex-033.jpg", "w": 3840, "h": 3362, "kb": 4272}, {"name": "左视", "file": "images/galvo-flex/galvo-flex-034.png", "thumb": "thumbs/galvo-flex/galvo-flex-034.jpg", "w": 3840, "h": 3362, "kb": 5219}, {"name": "右侧", "file": "images/galvo-flex/galvo-flex-035.png", "thumb": "thumbs/galvo-flex/galvo-flex-035.jpg", "w": 3840, "h": 3362, "kb": 4010}, {"name": "image", "file": "images/galvo-flex/galvo-flex-036.png", "thumb": "thumbs/galvo-flex/galvo-flex-036.jpg", "w": 3764, "h": 2562, "kb": 2598}, {"name": "image", "file": "images/galvo-flex/galvo-flex-037.png", "thumb": "thumbs/galvo-flex/galvo-flex-037.jpg", "w": 3764, "h": 2562, "kb": 2686}, {"name": "image", "file": "images/galvo-flex/galvo-flex-038.png", "thumb": "thumbs/galvo-flex/galvo-flex-038.jpg", "w": 3764, "h": 2562, "kb": 1776}, {"name": "image", "file": "images/galvo-flex/galvo-flex-039.png", "thumb": "thumbs/galvo-flex/galvo-flex-039.jpg", "w": 3764, "h": 2562, "kb": 2941}, {"name": "image", "file": "images/galvo-flex/galvo-flex-040.png", "thumb": "thumbs/galvo-flex/galvo-flex-040.jpg", "w": 3764, "h": 2562, "kb": 3007}]}, {"group": "Logo & Brand", "title": "Logo & Brand", "slug": "logo-brand", "items": [{"name": "icon-4", "file": "images/logo-brand/logo-brand-001.png", "thumb": "thumbs/logo-brand/logo-brand-001.jpg", "w": 2096, "h": 488, "kb": 561}, {"name": "image", "file": "images/logo-brand/logo-brand-002.png", "thumb": "thumbs/logo-brand/logo-brand-002.jpg", "w": 572, "h": 332, "kb": 55}, {"name": "image", "file": "images/logo-brand/logo-brand-003.png", "thumb": "thumbs/logo-brand/logo-brand-003.jpg", "w": 2498, "h": 224, "kb": 688}, {"name": "C77A03FE-9BFC-4dc6-AA2C-4B915B4AF520", "file": "images/logo-brand/logo-brand-004.png", "thumb": "thumbs/logo-brand/logo-brand-004.jpg", "w": 2099, "h": 850, "kb": 2686}, {"name": "CC547EA2-B877-4f21-874C-BA5BA6941E6F", "file": "images/logo-brand/logo-brand-005.png", "thumb": "thumbs/logo-brand/logo-brand-005.jpg", "w": 1962, "h": 1104, "kb": 2273}, {"name": "ChatGPT Image 2026年7月18日 11_31_47", "file": "images/logo-brand/logo-brand-006.png", "thumb": "thumbs/logo-brand/logo-brand-006.jpg", "w": 2214, "h": 1107, "kb": 2797}, {"name": "3c61f9ba7171751f27df57a55de10f87", "file": "images/logo-brand/logo-brand-007.png", "thumb": "thumbs/logo-brand/logo-brand-007.jpg", "w": 450, "h": 308, "kb": 5}, {"name": "688ba087719f1e5d50fa1ad7b4e2f453", "file": "images/logo-brand/logo-brand-008.png", "thumb": "thumbs/logo-brand/logo-brand-008.jpg", "w": 979, "h": 854, "kb": 76}, {"name": "8fbdc60c48d17a6bc592331a9c4fc474", "file": "images/logo-brand/logo-brand-009.png", "thumb": "thumbs/logo-brand/logo-brand-009.jpg", "w": 1879, "h": 1288, "kb": 217}, {"name": "4Products", "file": "images/logo-brand/logo-brand-010.png", "thumb": "thumbs/logo-brand/logo-brand-010.jpg", "w": 3840, "h": 3840, "kb": 14344}]}];
+const DATA = [{"group": "all", "title": "All Products 全系列", "slug": "all", "items": [{"name": "总统日H7渲染.87", "file": "images/all/all-001.png", "thumb": "thumbs/all/all-001.jpg", "w": 3840, "h": 3415, "kb": 1992}, {"name": "微信图片_20260610174503_49_846", "file": "images/all/all-002.png", "thumb": "thumbs/all/all-002.jpg", "w": 3840, "h": 3362, "kb": 4487}, {"name": "微信图片_20260611092738_50_846", "file": "images/all/all-003.jpg", "thumb": "thumbs/all/all-003.jpg", "w": 3840, "h": 3362, "kb": 922}, {"name": "4Products白底图", "file": "images/all/all-004.png", "thumb": "thumbs/all/all-004.jpg", "w": 3840, "h": 3840, "kb": 2616}, {"name": "微信图片_20260611100241_52_846", "file": "images/all/all-005.png", "thumb": "thumbs/all/all-005.jpg", "w": 3840, "h": 3362, "kb": 3302}, {"name": "微信图片_20260710171301_470_138", "file": "images/all/all-006.png", "thumb": "thumbs/all/all-006.jpg", "w": 2560, "h": 2241, "kb": 3633}, {"name": "微信图片_20260710171300_468_138", "file": "images/all/all-007.png", "thumb": "thumbs/all/all-007.jpg", "w": 2560, "h": 2241, "kb": 3601}, {"name": "微信图片_20260710171301_469_138", "file": "images/all/all-008.png", "thumb": "thumbs/all/all-008.jpg", "w": 2560, "h": 2241, "kb": 2073}, {"name": "微信图片_20260710171302_471_138", "file": "images/all/all-009.png", "thumb": "thumbs/all/all-009.jpg", "w": 2560, "h": 2241, "kb": 3254}, {"name": "微信图片_20260710171303_472_138", "file": "images/all/all-010.png", "thumb": "thumbs/all/all-010.jpg", "w": 2560, "h": 2241, "kb": 3319}, {"name": "微信图片_20260717115449_479_138", "file": "images/all/all-011.png", "thumb": "thumbs/all/all-011.jpg", "w": 3840, "h": 3362, "kb": 4641}, {"name": "ChatGPT Image 2026年7月10日 17_21_43", "file": "images/all/all-012.png", "thumb": "thumbs/all/all-012.jpg", "w": 2305, "h": 4096, "kb": 11436}, {"name": "4Products", "file": "images/all/all-013.png", "thumb": "thumbs/all/all-013.jpg", "w": 3840, "h": 3840, "kb": 14344}, {"name": "按新尺寸生成图片 (1)", "file": "images/all/all-014.png", "thumb": "thumbs/all/all-014.jpg", "w": 4096, "h": 4096, "kb": 22021}, {"name": "ChatGPT Image 2026年6月11日 09_58_48", "file": "images/all/all-015.png", "thumb": "thumbs/all/all-015.jpg", "w": 3840, "h": 2161, "kb": 6511}, {"name": "ChatGPT Image 2026年6月12日 15_48_38", "file": "images/all/all-016.png", "thumb": "thumbs/all/all-016.jpg", "w": 3840, "h": 2161, "kb": 5547}], "zip": "https://github.com/Yonge6/onelaser-product-images/releases/download/v2026.11.19b/onelaser-all.zip", "zipmb": 92}, {"group": "XRF Gen2", "title": "XRF Gen2", "slug": "xrf-gen2", "items": [{"name": "OneLaser_XRF_Product_3D_Gen2Render01_EN_v1", "file": "images/xrf-gen2/xrf-gen2-001.png", "thumb": "thumbs/xrf-gen2/xrf-gen2-001.jpg", "w": 3500, "h": 2186, "kb": 3633}, {"name": "OneLaser_XRF_Product_3D_Gen2Render02_EN_v1", "file": "images/xrf-gen2/xrf-gen2-002.png", "thumb": "thumbs/xrf-gen2/xrf-gen2-002.jpg", "w": 3500, "h": 2186, "kb": 4181}, {"name": "OneLaser_XRF_Product_3D_Gen2Render05_EN_v1", "file": "images/xrf-gen2/xrf-gen2-003.png", "thumb": "thumbs/xrf-gen2/xrf-gen2-003.jpg", "w": 3500, "h": 2186, "kb": 3894}, {"name": "OneLaser_XRF_Product_3D_Gen2Render06_EN_v1", "file": "images/xrf-gen2/xrf-gen2-004.png", "thumb": "thumbs/xrf-gen2/xrf-gen2-004.jpg", "w": 3500, "h": 2186, "kb": 5725}, {"name": "OneLaser_XRF_Product_3D_Gen2Render04_EN_v1", "file": "images/xrf-gen2/xrf-gen2-005.png", "thumb": "thumbs/xrf-gen2/xrf-gen2-005.jpg", "w": 3500, "h": 2186, "kb": 4146}, {"name": "44a21cfcf4e49ce2d5fee8e7fa9f73ae_0ab5d2fc-a3b7-4a79-bc96-ceb85a523afa", "file": "images/xrf-gen2/xrf-gen2-006.png", "thumb": "thumbs/xrf-gen2/xrf-gen2-006.jpg", "w": 3892, "h": 3502, "kb": 1568}, {"name": "OneLaser_XRF_Product_3D_Gen2Render03_EN_v1", "file": "images/xrf-gen2/xrf-gen2-007.png", "thumb": "thumbs/xrf-gen2/xrf-gen2-007.jpg", "w": 3500, "h": 2186, "kb": 5315}, {"name": "微信图片_20260709171432_457_138", "file": "images/xrf-gen2/xrf-gen2-008.png", "thumb": "thumbs/xrf-gen2/xrf-gen2-008.jpg", "w": 2560, "h": 1599, "kb": 2707}, {"name": "微信图片_20260709170451_455_138", "file": "images/xrf-gen2/xrf-gen2-009.png", "thumb": "thumbs/xrf-gen2/xrf-gen2-009.jpg", "w": 2560, "h": 1599, "kb": 1143}, {"name": "微信图片_20260709170451_456_138", "file": "images/xrf-gen2/xrf-gen2-010.png", "thumb": "thumbs/xrf-gen2/xrf-gen2-010.jpg", "w": 2560, "h": 1599, "kb": 1746}, {"name": "839d9e84510a0900681b9fc541852466", "file": "images/xrf-gen2/xrf-gen2-011.png", "thumb": "thumbs/xrf-gen2/xrf-gen2-011.jpg", "w": 1066, "h": 600, "kb": 81}, {"name": "OneLaser_XRFGen2_Product_3D_Render07_EN_v1", "file": "images/xrf-gen2/xrf-gen2-012.png", "thumb": "thumbs/xrf-gen2/xrf-gen2-012.jpg", "w": 3500, "h": 2186, "kb": 16743}, {"name": "OneLaser_XRFGen2_Product_3D_Render08_EN_v1", "file": "images/xrf-gen2/xrf-gen2-013.png", "thumb": "thumbs/xrf-gen2/xrf-gen2-013.jpg", "w": 2560, "h": 1599, "kb": 7067}, {"name": "OneLaser_XRFGen2_Product_3D_Render09_EN_v1", "file": "images/xrf-gen2/xrf-gen2-014.png", "thumb": "thumbs/xrf-gen2/xrf-gen2-014.jpg", "w": 2560, "h": 1599, "kb": 5609}, {"name": "OneLaser_XRFGen2_Product_3D_Render10_EN_v1", "file": "images/xrf-gen2/xrf-gen2-015.png", "thumb": "thumbs/xrf-gen2/xrf-gen2-015.jpg", "w": 2560, "h": 1599, "kb": 9854}, {"name": "OneLaser_XRFGen2_Product_3D_Render11_EN_v1", "file": "images/xrf-gen2/xrf-gen2-016.png", "thumb": "thumbs/xrf-gen2/xrf-gen2-016.jpg", "w": 2560, "h": 1599, "kb": 7302}, {"name": "OneLaser_XRFGen2_Product_3D_Render12_EN_v1", "file": "images/xrf-gen2/xrf-gen2-017.png", "thumb": "thumbs/xrf-gen2/xrf-gen2-017.jpg", "w": 2560, "h": 1599, "kb": 8247}, {"name": "OneLaser_XRFGen2_Product_3D_Render11_EN_v1 1", "file": "images/xrf-gen2/xrf-gen2-018.png", "thumb": "thumbs/xrf-gen2/xrf-gen2-018.jpg", "w": 1523, "h": 951, "kb": 1366}, {"name": "OneLaser_XRFGen2_Product_3D_Render12_EN_v1 1", "file": "images/xrf-gen2/xrf-gen2-019.png", "thumb": "thumbs/xrf-gen2/xrf-gen2-019.jpg", "w": 1522, "h": 951, "kb": 1540}, {"name": "iwEcAqNwbmcDAQTRAeEF0QMhBrBOMlxiWl3kWwofPhtGYIsAB9MAAAABATljxAgACaJpbQoAC9F6HA", "file": "images/xrf-gen2/xrf-gen2-020.png", "thumb": "thumbs/xrf-gen2/xrf-gen2-020.jpg", "w": 481, "h": 801, "kb": 30}, {"name": "OneLaser_XRFGen2_Product_3D_Render12_EN_v1 1", "file": "images/xrf-gen2/xrf-gen2-021.png", "thumb": "thumbs/xrf-gen2/xrf-gen2-021.jpg", "w": 1522, "h": 951, "kb": 1545}, {"name": "iwEcAqNwbmcDAQTRAeAF0QMdBrDXr2eTXo6h0QofPhtDxdEAB9MAAAABATljxAgACaJpbQoAC9IAAJCL", "file": "images/xrf-gen2/xrf-gen2-022.png", "thumb": "thumbs/xrf-gen2/xrf-gen2-022.jpg", "w": 480, "h": 797, "kb": 36}, {"name": "ChatGPT Image 2026年7月6日 15_42_26", "file": "images/xrf-gen2/xrf-gen2-023.png", "thumb": "thumbs/xrf-gen2/xrf-gen2-023.jpg", "w": 2876, "h": 4096, "kb": 11414}, {"name": "ChatGPT Image 2026年6月24日 17_46_10 (2) (1)", "file": "images/xrf-gen2/xrf-gen2-024.png", "thumb": "thumbs/xrf-gen2/xrf-gen2-024.jpg", "w": 2098, "h": 2965, "kb": 6195}], "zip": "https://github.com/Yonge6/onelaser-product-images/releases/download/v2026.11.19b/onelaser-xrf-gen2.zip", "zipmb": 108}, {"group": "XRF", "title": "XRF", "slug": "xrf", "items": [{"name": "XRF3", "file": "images/xrf/xrf-001.jpg", "thumb": "thumbs/xrf/xrf-001.jpg", "w": 1200, "h": 1200, "kb": 80}, {"name": "image", "file": "images/xrf/xrf-002.png", "thumb": "thumbs/xrf/xrf-002.jpg", "w": 1980, "h": 1236, "kb": 90}, {"name": "image（1）", "file": "images/xrf/xrf-003.png", "thumb": "thumbs/xrf/xrf-003.jpg", "w": 1980, "h": 1236, "kb": 160}, {"name": "image（2）", "file": "images/xrf/xrf-004.png", "thumb": "thumbs/xrf/xrf-004.jpg", "w": 1980, "h": 1238, "kb": 162}, {"name": "image（2）", "file": "images/xrf/xrf-005.png", "thumb": "thumbs/xrf/xrf-005.jpg", "w": 1434, "h": 895, "kb": 103}, {"name": "0cf05b927e333c9ddffe5b4072c4b5a1", "file": "images/xrf/xrf-006.png", "thumb": "thumbs/xrf/xrf-006.jpg", "w": 2178, "h": 1361, "kb": 896}, {"name": "image", "file": "images/xrf/xrf-007.png", "thumb": "thumbs/xrf/xrf-007.jpg", "w": 1526, "h": 1373, "kb": 538}, {"name": "de37b89da279929ef72035aab9268049", "file": "images/xrf/xrf-008.png", "thumb": "thumbs/xrf/xrf-008.jpg", "w": 1946, "h": 1095, "kb": 610}, {"name": "image（4）", "file": "images/xrf/xrf-009.png", "thumb": "thumbs/xrf/xrf-009.jpg", "w": 990, "h": 619, "kb": 187}, {"name": "image（5）", "file": "images/xrf/xrf-010.png", "thumb": "thumbs/xrf/xrf-010.jpg", "w": 1980, "h": 1782, "kb": 326}, {"name": "fddf901a387dd70a51552a0568ece86d_926fba2b-73e0-4d2a-9f1c-b413173bc4f5(2)", "file": "images/xrf/xrf-011.png", "thumb": "thumbs/xrf/xrf-011.jpg", "w": 1487, "h": 929, "kb": 392}, {"name": "image（6）", "file": "images/xrf/xrf-012.png", "thumb": "thumbs/xrf/xrf-012.jpg", "w": 1980, "h": 1782, "kb": 428}, {"name": "XRF-ChatGPT Image 2026年5月6日 16_35_33", "file": "images/xrf/xrf-013.png", "thumb": "thumbs/xrf/xrf-013.jpg", "w": 3840, "h": 1918, "kb": 3811}, {"name": "ChatGPT Image 2026年5月15日 11_01_43", "file": "images/xrf/xrf-014.png", "thumb": "thumbs/xrf/xrf-014.jpg", "w": 3515, "h": 1754, "kb": 4370}, {"name": "XRF-ChatGPT Image 2026年5月6日 16_35_22", "file": "images/xrf/xrf-015.png", "thumb": "thumbs/xrf/xrf-015.jpg", "w": 2479, "h": 1395, "kb": 4085}, {"name": "XRF带基座jimeng-2025-12-02-3541-超写实3D渲染，电影级布光（暖调环境光+局部冷光点缀），中景视角、居中构图；场景_", "file": "images/xrf/xrf-016.png", "thumb": "thumbs/xrf/xrf-016.jpg", "w": 2170, "h": 1218, "kb": 3028}, {"name": "XRFjimeng-2025-12-26-7701-在一间美式车库workshop里，浅棕色的木质工作台上摆着一台ONELASER_", "file": "images/xrf/xrf-017.png", "thumb": "thumbs/xrf/xrf-017.jpg", "w": 3836, "h": 1644, "kb": 7151}, {"name": "Education教学实验室激光雕刻作品场景", "file": "images/xrf/xrf-018.png", "thumb": "thumbs/xrf/xrf-018.jpg", "w": 2752, "h": 1536, "kb": 5844}, {"name": "Gemini_Generated_Image_fhnpb4fhnpb4fhnp", "file": "images/xrf/xrf-019.png", "thumb": "thumbs/xrf/xrf-019.jpg", "w": 1920, "h": 1280, "kb": 3730}, {"name": "image", "file": "images/xrf/xrf-020.png", "thumb": "thumbs/xrf/xrf-020.jpg", "w": 3906, "h": 1660, "kb": 8142}, {"name": "ChatGPT Image 2026年5月15日 11_01_43 1", "file": "images/xrf/xrf-021.png", "thumb": "thumbs/xrf/xrf-021.jpg", "w": 4096, "h": 2018, "kb": 7713}, {"name": "ChatGPT Image 2026年7月6日 17_38_53", "file": "images/xrf/xrf-022.png", "thumb": "thumbs/xrf/xrf-022.jpg", "w": 1536, "h": 1024, "kb": 1891}], "zip": "https://github.com/Yonge6/onelaser-product-images/releases/download/v2026.11.19b/onelaser-xrf.zip", "zipmb": 52}, {"group": "VertiGo", "title": "VertiGo", "slug": "vertigo", "items": [{"name": "VertiGo2", "file": "images/vertigo/vertigo-001.png", "thumb": "thumbs/vertigo/vertigo-001.jpg", "w": 4096, "h": 3642, "kb": 3074}, {"name": "VertiGo1", "file": "images/vertigo/vertigo-002.png", "thumb": "thumbs/vertigo/vertigo-002.jpg", "w": 4096, "h": 3642, "kb": 2653}, {"name": "VertiGo3", "file": "images/vertigo/vertigo-003.png", "thumb": "thumbs/vertigo/vertigo-003.jpg", "w": 4096, "h": 3642, "kb": 1788}, {"name": "VertiGo4", "file": "images/vertigo/vertigo-004.png", "thumb": "thumbs/vertigo/vertigo-004.jpg", "w": 4096, "h": 3642, "kb": 3082}, {"name": "VertiGo5", "file": "images/vertigo/vertigo-005.png", "thumb": "thumbs/vertigo/vertigo-005.jpg", "w": 4096, "h": 3642, "kb": 2690}, {"name": "VertiGo6", "file": "images/vertigo/vertigo-006.png", "thumb": "thumbs/vertigo/vertigo-006.jpg", "w": 4096, "h": 3642, "kb": 1713}, {"name": "VertiGo7", "file": "images/vertigo/vertigo-007.png", "thumb": "thumbs/vertigo/vertigo-007.jpg", "w": 4096, "h": 3642, "kb": 2760}, {"name": "VertiGo8", "file": "images/vertigo/vertigo-008.png", "thumb": "thumbs/vertigo/vertigo-008.jpg", "w": 4096, "h": 3642, "kb": 3060}, {"name": "开盖", "file": "images/vertigo/vertigo-009.png", "thumb": "thumbs/vertigo/vertigo-009.jpg", "w": 4096, "h": 3642, "kb": 4942}, {"name": "Rectangle 763", "file": "images/vertigo/vertigo-010.png", "thumb": "thumbs/vertigo/vertigo-010.jpg", "w": 2974, "h": 1394, "kb": 4543}, {"name": "分组 13", "file": "images/vertigo/vertigo-011.png", "thumb": "thumbs/vertigo/vertigo-011.jpg", "w": 2100, "h": 1211, "kb": 2003}, {"name": "画板 1 4", "file": "images/vertigo/vertigo-012.png", "thumb": "thumbs/vertigo/vertigo-012.jpg", "w": 3840, "h": 1800, "kb": 6232}, {"name": "12image", "file": "images/vertigo/vertigo-013.png", "thumb": "thumbs/vertigo/vertigo-013.jpg", "w": 2256, "h": 1410, "kb": 1346}, {"name": "Rectangle 818", "file": "images/vertigo/vertigo-014.png", "thumb": "thumbs/vertigo/vertigo-014.jpg", "w": 3840, "h": 1444, "kb": 1574}, {"name": "quality_restoration_20251006104146110", "file": "images/vertigo/vertigo-015.png", "thumb": "thumbs/vertigo/vertigo-015.jpg", "w": 3840, "h": 2196, "kb": 9738}, {"name": "VertiGoGemini_Generated_Image_j2jwuvj2jwuvj2jw", "file": "images/vertigo/vertigo-016.png", "thumb": "thumbs/vertigo/vertigo-016.jpg", "w": 1920, "h": 1097, "kb": 2531}, {"name": "image", "file": "images/vertigo/vertigo-017.png", "thumb": "thumbs/vertigo/vertigo-017.jpg", "w": 3526, "h": 1620, "kb": 7092}], "zip": "https://github.com/Yonge6/onelaser-product-images/releases/download/v2026.11.19b/onelaser-vertigo.zip", "zipmb": 59}, {"group": "Hydra Gen2", "title": "Hydra Gen2", "slug": "hydra-gen2", "items": [{"name": "Hydra 7 Gen2 正面渲染", "file": "images/hydra-gen2/hydra-gen2-7-001.png", "thumb": "thumbs/hydra-gen2/hydra-gen2-7-001.jpg", "w": 2400, "h": 1650, "kb": 1341, "model": 7}, {"name": "Hydra 9 Gen2 正面渲染", "file": "images/hydra-gen2/hydra-gen2-9-001.png", "thumb": "thumbs/hydra-gen2/hydra-gen2-9-001.jpg", "w": 2400, "h": 1650, "kb": 1399, "model": 9}, {"name": "Hydra 13 Gen2 正面渲染", "file": "images/hydra-gen2/hydra-gen2-13-001.png", "thumb": "thumbs/hydra-gen2/hydra-gen2-13-001.jpg", "w": 2400, "h": 1650, "kb": 1740, "model": 13}, {"name": "Hydra 16 Gen2 正面渲染", "file": "images/hydra-gen2/hydra-gen2-16-001.png", "thumb": "thumbs/hydra-gen2/hydra-gen2-16-001.jpg", "w": 2400, "h": 1650, "kb": 1568, "model": 16}, {"name": "Hydra  7", "file": "images/hydra-gen2/hydra-gen2-7-002.png", "thumb": "thumbs/hydra-gen2/hydra-gen2-7-002.jpg", "w": 1500, "h": 1500, "kb": 628, "model": 7}, {"name": "Hydra  7 拷贝", "file": "images/hydra-gen2/hydra-gen2-7-003.png", "thumb": "thumbs/hydra-gen2/hydra-gen2-7-003.jpg", "w": 1500, "h": 1500, "kb": 925, "model": 7}, {"name": "7", "file": "images/hydra-gen2/hydra-gen2-7-004.jpg", "thumb": "thumbs/hydra-gen2/hydra-gen2-7-004.jpg", "w": 2560, "h": 2276, "kb": 581, "model": 7}, {"name": "微信图片_20260916173924_54_277", "file": "images/hydra-gen2/hydra-gen2-9-002.png", "thumb": "thumbs/hydra-gen2/hydra-gen2-9-002.jpg", "w": 2560, "h": 2276, "kb": 3042, "model": 9}, {"name": "HydraGen2渲染.48", "file": "images/hydra-gen2/hydra-gen2-9-003.png", "thumb": "thumbs/hydra-gen2/hydra-gen2-9-003.jpg", "w": 3840, "h": 3413, "kb": 7409, "model": 9}, {"name": "Hydra Gen2-9-1100x678-1", "file": "images/hydra-gen2/hydra-gen2-9-004.png", "thumb": "thumbs/hydra-gen2/hydra-gen2-9-004.jpg", "w": 1100, "h": 678, "kb": 359, "model": 9}, {"name": "Hydra Gen2-9-1100x678-2", "file": "images/hydra-gen2/hydra-gen2-9-005.png", "thumb": "thumbs/hydra-gen2/hydra-gen2-9-005.jpg", "w": 1100, "h": 678, "kb": 303, "model": 9}, {"name": "9", "file": "images/hydra-gen2/hydra-gen2-9-006.jpg", "thumb": "thumbs/hydra-gen2/hydra-gen2-9-006.jpg", "w": 2560, "h": 2276, "kb": 570, "model": 9}, {"name": "9-2", "file": "images/hydra-gen2/hydra-gen2-9-007.jpg", "thumb": "thumbs/hydra-gen2/hydra-gen2-9-007.jpg", "w": 2560, "h": 2276, "kb": 432, "model": 9}, {"name": "Hydra  9", "file": "images/hydra-gen2/hydra-gen2-9-008.png", "thumb": "thumbs/hydra-gen2/hydra-gen2-9-008.jpg", "w": 1500, "h": 1500, "kb": 710, "model": 9}, {"name": "13", "file": "images/hydra-gen2/hydra-gen2-13-002.jpg", "thumb": "thumbs/hydra-gen2/hydra-gen2-13-002.jpg", "w": 2560, "h": 2276, "kb": 729, "model": 13}, {"name": "Hydra  13 拷贝", "file": "images/hydra-gen2/hydra-gen2-13-003.png", "thumb": "thumbs/hydra-gen2/hydra-gen2-13-003.jpg", "w": 1500, "h": 1500, "kb": 1030, "model": 13}, {"name": "Hydra  13", "file": "images/hydra-gen2/hydra-gen2-13-004.png", "thumb": "thumbs/hydra-gen2/hydra-gen2-13-004.jpg", "w": 1500, "h": 1500, "kb": 691, "model": 13}, {"name": "image", "file": "images/hydra-gen2/hydra-gen2-13-005.png", "thumb": "thumbs/hydra-gen2/hydra-gen2-13-005.jpg", "w": 1346, "h": 1346, "kb": 370, "model": 13}, {"name": "Hydra Gen2-16-1100x678-1", "file": "images/hydra-gen2/hydra-gen2-16-002.png", "thumb": "thumbs/hydra-gen2/hydra-gen2-16-002.jpg", "w": 1100, "h": 678, "kb": 261, "model": 16}, {"name": "Hydra Gen2-16-1100x678-2", "file": "images/hydra-gen2/hydra-gen2-16-003.png", "thumb": "thumbs/hydra-gen2/hydra-gen2-16-003.jpg", "w": 1100, "h": 678, "kb": 302, "model": 16}, {"name": "Hydra Gen2-16-1100x978", "file": "images/hydra-gen2/hydra-gen2-16-004.png", "thumb": "thumbs/hydra-gen2/hydra-gen2-16-004.jpg", "w": 1100, "h": 978, "kb": 436, "model": 16}, {"name": "16", "file": "images/hydra-gen2/hydra-gen2-16-005.jpg", "thumb": "thumbs/hydra-gen2/hydra-gen2-16-005.jpg", "w": 2560, "h": 2304, "kb": 608, "model": 16}, {"name": "Hydra 16", "file": "images/hydra-gen2/hydra-gen2-16-006.jpg", "thumb": "thumbs/hydra-gen2/hydra-gen2-16-006.jpg", "w": 1500, "h": 1500, "kb": 282, "model": 16}, {"name": "Hydra 16 拷贝", "file": "images/hydra-gen2/hydra-gen2-16-007.png", "thumb": "thumbs/hydra-gen2/hydra-gen2-16-007.jpg", "w": 1500, "h": 1500, "kb": 954, "model": 16}, {"name": "Product_Hdyra9Gen2_2026Q2_1", "file": "images/hydra-gen2/hydra-gen2-9-009.png", "thumb": "thumbs/hydra-gen2/hydra-gen2-9-009.jpg", "w": 3840, "h": 1801, "kb": 9018, "model": 9}, {"name": "Hydra-Gen2-Gemini_Generated_Image_lh4b7vlh4b7vlh4b", "file": "images/hydra-gen2/hydra-gen2-001.png", "thumb": "thumbs/hydra-gen2/hydra-gen2-001.jpg", "w": 3168, "h": 1344, "kb": 7287}, {"name": "按新尺寸生成图片 (1)", "file": "images/hydra-gen2/hydra-gen2-9-010.png", "thumb": "thumbs/hydra-gen2/hydra-gen2-9-010.jpg", "w": 1920, "h": 1080, "kb": 1906, "model": 9}, {"name": "Hydra9场景图jimeng-2025-12-08-8731-电商风格，超写实3D渲染，电影级暗调氛围，低平视视角。场景为美国工业风家庭车库：_", "file": "images/hydra-gen2/hydra-gen2-9-011.png", "thumb": "thumbs/hydra-gen2/hydra-gen2-9-011.jpg", "w": 3625, "h": 2039, "kb": 6220, "model": 9}, {"name": "ChatGPT Image 2026年7月7日 10_20_22", "file": "images/hydra-gen2/hydra-gen2-002.png", "thumb": "thumbs/hydra-gen2/hydra-gen2-002.jpg", "w": 3102, "h": 4096, "kb": 20549}, {"name": "878fa8e67dfa81609b52de94a1bfcdb4", "file": "images/hydra-gen2/hydra-gen2-9-012.png", "thumb": "thumbs/hydra-gen2/hydra-gen2-9-012.jpg", "w": 1920, "h": 1707, "kb": 1448, "model": 9}, {"name": "微信图片_20260917150855_64_277", "file": "images/hydra-gen2/hydra-gen2-003.jpg", "thumb": "thumbs/hydra-gen2/hydra-gen2-003.jpg", "w": 2560, "h": 2276, "kb": 1636}, {"name": "微信图片_20260917150857_65_277", "file": "images/hydra-gen2/hydra-gen2-004.png", "thumb": "thumbs/hydra-gen2/hydra-gen2-004.jpg", "w": 2560, "h": 2276, "kb": 4655}, {"name": "微信图片_20260917153528_66_277", "file": "images/hydra-gen2/hydra-gen2-005.png", "thumb": "thumbs/hydra-gen2/hydra-gen2-005.jpg", "w": 2560, "h": 2276, "kb": 8456}, {"name": "微信图片_20260917154003_67_277", "file": "images/hydra-gen2/hydra-gen2-9-013.png", "thumb": "thumbs/hydra-gen2/hydra-gen2-9-013.jpg", "w": 2560, "h": 2276, "kb": 3617, "model": 9}, {"name": "微信图片_20260917154916_68_277", "file": "images/hydra-gen2/hydra-gen2-9-014.png", "thumb": "thumbs/hydra-gen2/hydra-gen2-9-014.jpg", "w": 2560, "h": 2276, "kb": 3544, "model": 9}], "modelFilters": [7, 9, 13, 16], "zip": "https://github.com/Yonge6/onelaser-product-images/releases/download/v2026.11.19b/onelaser-hydra-gen2.zip", "zipmb": 93}, {"group": "Cobra", "title": "Cobra", "slug": "cobra", "items": [{"name": "Cobra 8 正面渲染", "file": "images/cobra/cobra-8-001.png", "thumb": "thumbs/cobra/cobra-8-001.jpg", "w": 2400, "h": 1650, "kb": 1378, "model": 8}, {"name": "Cobra 10 正面渲染", "file": "images/cobra/cobra-10-001.png", "thumb": "thumbs/cobra/cobra-10-001.jpg", "w": 2400, "h": 1650, "kb": 1739, "model": 10}, {"name": "Cobra 14 正面渲染", "file": "images/cobra/cobra-14-001.png", "thumb": "thumbs/cobra/cobra-14-001.jpg", "w": 2400, "h": 1650, "kb": 1717, "model": 14}, {"name": "image", "file": "images/cobra/cobra-8-002.png", "thumb": "thumbs/cobra/cobra-8-002.jpg", "w": 1200, "h": 1200, "kb": 259, "model": 8}, {"name": "image", "file": "images/cobra/cobra-8-003.png", "thumb": "thumbs/cobra/cobra-8-003.jpg", "w": 1320, "h": 1320, "kb": 357, "model": 8}, {"name": "image", "file": "images/cobra/cobra-8-004.png", "thumb": "thumbs/cobra/cobra-8-004.jpg", "w": 1320, "h": 1320, "kb": 337, "model": 8}, {"name": "Cobra 8 早期渲染（旧标 7，俯视）", "file": "images/cobra/cobra-001.png", "thumb": "thumbs/cobra/cobra-001.jpg", "w": 4000, "h": 3500, "kb": 3386}, {"name": "Cobra 8 早期渲染（旧标 7，正面）", "file": "images/cobra/cobra-002.png", "thumb": "thumbs/cobra/cobra-002.jpg", "w": 4000, "h": 3500, "kb": 2430}, {"name": "Cobra10渲染.60", "file": "images/cobra/cobra-10-002.png", "thumb": "thumbs/cobra/cobra-10-002.jpg", "w": 4000, "h": 3500, "kb": 3860, "model": 10}, {"name": "Cobra10渲染.63", "file": "images/cobra/cobra-10-003.png", "thumb": "thumbs/cobra/cobra-10-003.jpg", "w": 4000, "h": 3500, "kb": 3714, "model": 10}, {"name": "Cobra 10-2", "file": "images/cobra/cobra-10-004.png", "thumb": "thumbs/cobra/cobra-10-004.jpg", "w": 1320, "h": 1320, "kb": 135, "model": 10}, {"name": "Cobra 10-3", "file": "images/cobra/cobra-10-005.png", "thumb": "thumbs/cobra/cobra-10-005.jpg", "w": 1320, "h": 1320, "kb": 116, "model": 10}, {"name": "image", "file": "images/cobra/cobra-10-006.png", "thumb": "thumbs/cobra/cobra-10-006.jpg", "w": 1200, "h": 1200, "kb": 291, "model": 10}, {"name": "b1ee2e718a29c2d35ada9e6e1209528d", "file": "images/cobra/cobra-10-007.png", "thumb": "thumbs/cobra/cobra-10-007.jpg", "w": 2560, "h": 2240, "kb": 1111, "model": 10}, {"name": "Cobra10渲染.67", "file": "images/cobra/cobra-10-008.png", "thumb": "thumbs/cobra/cobra-10-008.jpg", "w": 4000, "h": 3500, "kb": 3050, "model": 10}, {"name": "cobra10-烟", "file": "images/cobra/cobra-10-009.jpg", "thumb": "thumbs/cobra/cobra-10-009.jpg", "w": 3840, "h": 3360, "kb": 1143, "model": 10}, {"name": "Cobra14渲染.bip.68", "file": "images/cobra/cobra-14-002.png", "thumb": "thumbs/cobra/cobra-14-002.jpg", "w": 3840, "h": 2879, "kb": 3791, "model": 14}, {"name": "Cobra14渲染.bip.70", "file": "images/cobra/cobra-14-003.png", "thumb": "thumbs/cobra/cobra-14-003.jpg", "w": 3840, "h": 2879, "kb": 3442, "model": 14}, {"name": "Cobra14渲染.bip.89", "file": "images/cobra/cobra-14-004.png", "thumb": "thumbs/cobra/cobra-14-004.jpg", "w": 3840, "h": 2879, "kb": 3336, "model": 14}, {"name": "Cobra14渲染.bip.69", "file": "images/cobra/cobra-14-005.png", "thumb": "thumbs/cobra/cobra-14-005.jpg", "w": 3840, "h": 2879, "kb": 3848, "model": 14}, {"name": "Cobra14渲染.bip.71", "file": "images/cobra/cobra-14-006.png", "thumb": "thumbs/cobra/cobra-14-006.jpg", "w": 3840, "h": 2879, "kb": 3329, "model": 14}, {"name": "Cobra14渲染.bip.84", "file": "images/cobra/cobra-14-007.png", "thumb": "thumbs/cobra/cobra-14-007.jpg", "w": 2560, "h": 1919, "kb": 1743, "model": 14}, {"name": "Cobra14渲染.bip.76", "file": "images/cobra/cobra-14-008.png", "thumb": "thumbs/cobra/cobra-14-008.jpg", "w": 3840, "h": 2879, "kb": 1799, "model": 14}, {"name": "Cobra系列Banner 1", "file": "images/cobra/cobra-003.png", "thumb": "thumbs/cobra/cobra-003.jpg", "w": 1920, "h": 900, "kb": 300}, {"name": "image", "file": "images/cobra/cobra-10-010.png", "thumb": "thumbs/cobra/cobra-10-010.jpg", "w": 2137, "h": 1109, "kb": 1841, "model": 10}], "modelFilters": [8, 10, 14], "zip": "https://github.com/Yonge6/onelaser-product-images/releases/download/v2026.11.19b/onelaser-cobra.zip", "zipmb": 47}, {"group": "Viper", "title": "Viper", "slug": "viper", "items": [{"name": "右侧-下降", "file": "images/viper/viper-001.png", "thumb": "thumbs/viper/viper-001.jpg", "w": 4096, "h": 3642, "kb": 2329}, {"name": "右侧-门盖上升", "file": "images/viper/viper-002.png", "thumb": "thumbs/viper/viper-002.jpg", "w": 4096, "h": 3642, "kb": 2574}, {"name": "右侧", "file": "images/viper/viper-003.png", "thumb": "thumbs/viper/viper-003.jpg", "w": 4096, "h": 3642, "kb": 2416}, {"name": "正视-上升", "file": "images/viper/viper-004.png", "thumb": "thumbs/viper/viper-004.jpg", "w": 4096, "h": 3642, "kb": 1696}, {"name": "正视", "file": "images/viper/viper-005.png", "thumb": "thumbs/viper/viper-005.jpg", "w": 4096, "h": 3642, "kb": 1282}, {"name": "右侧视-取下操作屏", "file": "images/viper/viper-006.png", "thumb": "thumbs/viper/viper-006.jpg", "w": 4096, "h": 3642, "kb": 2492}, {"name": "左侧", "file": "images/viper/viper-007.png", "thumb": "thumbs/viper/viper-007.jpg", "w": 4096, "h": 3642, "kb": 2244}, {"name": "左俯视-上升", "file": "images/viper/viper-008.png", "thumb": "thumbs/viper/viper-008.jpg", "w": 4096, "h": 3642, "kb": 2695}, {"name": "右侧-门盖上升 1", "file": "images/viper/viper-009.png", "thumb": "thumbs/viper/viper-009.jpg", "w": 1627, "h": 1447, "kb": 492}, {"name": "banner", "file": "images/viper/viper-010.png", "thumb": "thumbs/viper/viper-010.jpg", "w": 4096, "h": 1914, "kb": 9005}, {"name": "Rectangle", "file": "images/viper/viper-011.png", "thumb": "thumbs/viper/viper-011.jpg", "w": 4096, "h": 1673, "kb": 11161}, {"name": "Rectangle", "file": "images/viper/viper-012.png", "thumb": "thumbs/viper/viper-012.jpg", "w": 4096, "h": 1915, "kb": 8874}, {"name": "image", "file": "images/viper/viper-013.png", "thumb": "thumbs/viper/viper-013.jpg", "w": 4096, "h": 2298, "kb": 8859}], "zip": "https://github.com/Yonge6/onelaser-product-images/releases/download/v2026.11.19b/onelaser-viper.zip", "zipmb": 55}, {"group": "YRF", "title": "YRF", "slug": "yrf", "items": [{"name": "微信图片_20260709160300_450_138", "file": "images/yrf/yrf-001.png", "thumb": "thumbs/yrf/yrf-001.jpg", "w": 2560, "h": 1698, "kb": 1613}, {"name": "微信图片_20260709160300_451_138", "file": "images/yrf/yrf-002.png", "thumb": "thumbs/yrf/yrf-002.jpg", "w": 2560, "h": 1698, "kb": 1317}, {"name": "微信图片_20260709160302_453_138", "file": "images/yrf/yrf-003.png", "thumb": "thumbs/yrf/yrf-003.jpg", "w": 2560, "h": 1698, "kb": 2062}, {"name": "微信图片_20260709160303_454_138", "file": "images/yrf/yrf-004.png", "thumb": "thumbs/yrf/yrf-004.jpg", "w": 2560, "h": 1698, "kb": 2092}, {"name": "微信图片_20260709160301_452_138", "file": "images/yrf/yrf-005.png", "thumb": "thumbs/yrf/yrf-005.jpg", "w": 2560, "h": 1698, "kb": 6940}], "zip": "https://github.com/Yonge6/onelaser-product-images/releases/download/v2026.11.19b/onelaser-yrf.zip", "zipmb": 14}, {"group": "Galvo Flex", "title": "Galvo Flex", "slug": "galvo-flex", "items": [{"name": "后侧", "file": "images/galvo-flex/galvo-flex-001.png", "thumb": "thumbs/galvo-flex/galvo-flex-001.jpg", "w": 3840, "h": 3362, "kb": 5236}, {"name": "5W UV＋", "file": "images/galvo-flex/galvo-flex-002.png", "thumb": "thumbs/galvo-flex/galvo-flex-002.jpg", "w": 2358, "h": 2007, "kb": 1114}, {"name": "后视", "file": "images/galvo-flex/galvo-flex-003.png", "thumb": "thumbs/galvo-flex/galvo-flex-003.jpg", "w": 3840, "h": 3362, "kb": 3104}, {"name": "右视", "file": "images/galvo-flex/galvo-flex-004.png", "thumb": "thumbs/galvo-flex/galvo-flex-004.jpg", "w": 3840, "h": 3362, "kb": 3973}, {"name": "正视", "file": "images/galvo-flex/galvo-flex-005.png", "thumb": "thumbs/galvo-flex/galvo-flex-005.jpg", "w": 3840, "h": 3362, "kb": 2643}, {"name": "正右视", "file": "images/galvo-flex/galvo-flex-006.png", "thumb": "thumbs/galvo-flex/galvo-flex-006.jpg", "w": 3840, "h": 3362, "kb": 2856}, {"name": "左侧", "file": "images/galvo-flex/galvo-flex-007.png", "thumb": "thumbs/galvo-flex/galvo-flex-007.jpg", "w": 3840, "h": 3362, "kb": 3734}, {"name": "左视", "file": "images/galvo-flex/galvo-flex-008.png", "thumb": "thumbs/galvo-flex/galvo-flex-008.jpg", "w": 3840, "h": 3362, "kb": 5711}, {"name": "右侧", "file": "images/galvo-flex/galvo-flex-009.png", "thumb": "thumbs/galvo-flex/galvo-flex-009.jpg", "w": 3840, "h": 3362, "kb": 4021}, {"name": "右俯视", "file": "images/galvo-flex/galvo-flex-010.png", "thumb": "thumbs/galvo-flex/galvo-flex-010.jpg", "w": 3840, "h": 3362, "kb": 4987}, {"name": "正视", "file": "images/galvo-flex/galvo-flex-011.png", "thumb": "thumbs/galvo-flex/galvo-flex-011.jpg", "w": 3840, "h": 3362, "kb": 2326}, {"name": "后视", "file": "images/galvo-flex/galvo-flex-012.png", "thumb": "thumbs/galvo-flex/galvo-flex-012.jpg", "w": 3840, "h": 3362, "kb": 3633}, {"name": "正右侧", "file": "images/galvo-flex/galvo-flex-013.png", "thumb": "thumbs/galvo-flex/galvo-flex-013.jpg", "w": 3840, "h": 3362, "kb": 2627}, {"name": "侧后视", "file": "images/galvo-flex/galvo-flex-014.png", "thumb": "thumbs/galvo-flex/galvo-flex-014.jpg", "w": 3840, "h": 3362, "kb": 4834}, {"name": "左侧", "file": "images/galvo-flex/galvo-flex-015.png", "thumb": "thumbs/galvo-flex/galvo-flex-015.jpg", "w": 3840, "h": 3362, "kb": 4097}, {"name": "侧后", "file": "images/galvo-flex/galvo-flex-016.png", "thumb": "thumbs/galvo-flex/galvo-flex-016.jpg", "w": 3840, "h": 3362, "kb": 4855}, {"name": "右侧", "file": "images/galvo-flex/galvo-flex-017.png", "thumb": "thumbs/galvo-flex/galvo-flex-017.jpg", "w": 3840, "h": 3362, "kb": 3603}, {"name": "右俯视", "file": "images/galvo-flex/galvo-flex-018.png", "thumb": "thumbs/galvo-flex/galvo-flex-018.jpg", "w": 3840, "h": 3362, "kb": 4781}, {"name": "正后视", "file": "images/galvo-flex/galvo-flex-019.png", "thumb": "thumbs/galvo-flex/galvo-flex-019.jpg", "w": 3840, "h": 3362, "kb": 3604}, {"name": "正视", "file": "images/galvo-flex/galvo-flex-020.png", "thumb": "thumbs/galvo-flex/galvo-flex-020.jpg", "w": 3840, "h": 3362, "kb": 2258}, {"name": "正右视", "file": "images/galvo-flex/galvo-flex-021.png", "thumb": "thumbs/galvo-flex/galvo-flex-021.jpg", "w": 3840, "h": 3362, "kb": 2848}, {"name": "左侧", "file": "images/galvo-flex/galvo-flex-022.png", "thumb": "thumbs/galvo-flex/galvo-flex-022.jpg", "w": 3840, "h": 3362, "kb": 4425}, {"name": "仰角雕刻状态", "file": "images/galvo-flex/galvo-flex-023.png", "thumb": "thumbs/galvo-flex/galvo-flex-023.jpg", "w": 3840, "h": 3362, "kb": 3240}, {"name": "右侧", "file": "images/galvo-flex/galvo-flex-024.png", "thumb": "thumbs/galvo-flex/galvo-flex-024.jpg", "w": 3840, "h": 3362, "kb": 4015}, {"name": "右俯视", "file": "images/galvo-flex/galvo-flex-025.png", "thumb": "thumbs/galvo-flex/galvo-flex-025.jpg", "w": 3840, "h": 3362, "kb": 4117}, {"name": "image", "file": "images/galvo-flex/galvo-flex-026.png", "thumb": "thumbs/galvo-flex/galvo-flex-026.jpg", "w": 1032, "h": 204, "kb": 60}, {"name": "后侧", "file": "images/galvo-flex/galvo-flex-027.png", "thumb": "thumbs/galvo-flex/galvo-flex-027.jpg", "w": 3840, "h": 3362, "kb": 5568}, {"name": "后视", "file": "images/galvo-flex/galvo-flex-028.png", "thumb": "thumbs/galvo-flex/galvo-flex-028.jpg", "w": 3840, "h": 3362, "kb": 4966}, {"name": "右侧", "file": "images/galvo-flex/galvo-flex-029.png", "thumb": "thumbs/galvo-flex/galvo-flex-029.jpg", "w": 3840, "h": 3362, "kb": 4611}, {"name": "右俯视", "file": "images/galvo-flex/galvo-flex-030.png", "thumb": "thumbs/galvo-flex/galvo-flex-030.jpg", "w": 3840, "h": 3362, "kb": 4538}, {"name": "右视", "file": "images/galvo-flex/galvo-flex-031.png", "thumb": "thumbs/galvo-flex/galvo-flex-031.jpg", "w": 3840, "h": 3362, "kb": 3894}, {"name": "正视", "file": "images/galvo-flex/galvo-flex-032.png", "thumb": "thumbs/galvo-flex/galvo-flex-032.jpg", "w": 3840, "h": 3362, "kb": 3036}, {"name": "左侧", "file": "images/galvo-flex/galvo-flex-033.png", "thumb": "thumbs/galvo-flex/galvo-flex-033.jpg", "w": 3840, "h": 3362, "kb": 4272}, {"name": "左视", "file": "images/galvo-flex/galvo-flex-034.png", "thumb": "thumbs/galvo-flex/galvo-flex-034.jpg", "w": 3840, "h": 3362, "kb": 5219}, {"name": "右侧", "file": "images/galvo-flex/galvo-flex-035.png", "thumb": "thumbs/galvo-flex/galvo-flex-035.jpg", "w": 3840, "h": 3362, "kb": 4010}, {"name": "image", "file": "images/galvo-flex/galvo-flex-036.png", "thumb": "thumbs/galvo-flex/galvo-flex-036.jpg", "w": 3764, "h": 2562, "kb": 2598}, {"name": "image", "file": "images/galvo-flex/galvo-flex-037.png", "thumb": "thumbs/galvo-flex/galvo-flex-037.jpg", "w": 3764, "h": 2562, "kb": 2686}, {"name": "image", "file": "images/galvo-flex/galvo-flex-038.png", "thumb": "thumbs/galvo-flex/galvo-flex-038.jpg", "w": 3764, "h": 2562, "kb": 1776}, {"name": "image", "file": "images/galvo-flex/galvo-flex-039.png", "thumb": "thumbs/galvo-flex/galvo-flex-039.jpg", "w": 3764, "h": 2562, "kb": 2941}, {"name": "image", "file": "images/galvo-flex/galvo-flex-040.png", "thumb": "thumbs/galvo-flex/galvo-flex-040.jpg", "w": 3764, "h": 2562, "kb": 3007}], "zip": "https://github.com/Yonge6/onelaser-product-images/releases/download/v2026.11.19b/onelaser-galvo-flex.zip", "zipmb": 142}, {"group": "Logo & Brand", "title": "Logo & Brand", "slug": "logo-brand", "items": [{"name": "icon-4", "file": "images/logo-brand/logo-brand-001.png", "thumb": "thumbs/logo-brand/logo-brand-001.jpg", "w": 2096, "h": 488, "kb": 561}, {"name": "image", "file": "images/logo-brand/logo-brand-002.png", "thumb": "thumbs/logo-brand/logo-brand-002.jpg", "w": 572, "h": 332, "kb": 55}, {"name": "image", "file": "images/logo-brand/logo-brand-003.png", "thumb": "thumbs/logo-brand/logo-brand-003.jpg", "w": 2498, "h": 224, "kb": 688}, {"name": "C77A03FE-9BFC-4dc6-AA2C-4B915B4AF520", "file": "images/logo-brand/logo-brand-004.png", "thumb": "thumbs/logo-brand/logo-brand-004.jpg", "w": 2099, "h": 850, "kb": 2686}, {"name": "CC547EA2-B877-4f21-874C-BA5BA6941E6F", "file": "images/logo-brand/logo-brand-005.png", "thumb": "thumbs/logo-brand/logo-brand-005.jpg", "w": 1962, "h": 1104, "kb": 2273}, {"name": "ChatGPT Image 2026年7月18日 11_31_47", "file": "images/logo-brand/logo-brand-006.png", "thumb": "thumbs/logo-brand/logo-brand-006.jpg", "w": 2214, "h": 1107, "kb": 2797}, {"name": "3c61f9ba7171751f27df57a55de10f87", "file": "images/logo-brand/logo-brand-007.png", "thumb": "thumbs/logo-brand/logo-brand-007.jpg", "w": 450, "h": 308, "kb": 5}, {"name": "688ba087719f1e5d50fa1ad7b4e2f453", "file": "images/logo-brand/logo-brand-008.png", "thumb": "thumbs/logo-brand/logo-brand-008.jpg", "w": 979, "h": 854, "kb": 76}, {"name": "8fbdc60c48d17a6bc592331a9c4fc474", "file": "images/logo-brand/logo-brand-009.png", "thumb": "thumbs/logo-brand/logo-brand-009.jpg", "w": 1879, "h": 1288, "kb": 217}, {"name": "4Products", "file": "images/logo-brand/logo-brand-010.png", "thumb": "thumbs/logo-brand/logo-brand-010.jpg", "w": 3840, "h": 3840, "kb": 14344}], "zip": "https://github.com/Yonge6/onelaser-product-images/releases/download/v2026.11.19b/onelaser-logo-brand.zip", "zipmb": 23}];
 const RAW = "https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/";
-const assetPath = f => f.split("/").map(encodeURIComponent).join("/");
-const url = f => RAW + assetPath(f);
-const flat = [];
-const modelGroups = new Map();
-const modelRoutes = new Map();
-const nav = document.getElementById("nav"), main = document.getElementById("main");
-DATA.forEach(g => {
-  if (!g.items.length) return;
-  nav.insertAdjacentHTML("beforeend", `<a href="#${g.slug}" data-s="${g.slug}">${g.title}<span>${g.items.length}</span></a>`);
-  const sec = document.createElement("section"); sec.id = g.slug;
-  sec.innerHTML = `<div class="sh"><h2>${g.title}</h2><span class="n" aria-live="polite">${g.items.length} 张</span><button class="btn" data-copy="${g.slug}">复制本组全部链接</button></div><div class="grid"></div>`;
-  const grid = sec.querySelector(".grid");
-  const cards = [];
-  if (g.modelFilters) {
-    const filters = document.createElement("div");
-    filters.className = "filters";
-    filters.setAttribute("role", "group");
-    filters.setAttribute("aria-label", g.title + "型号筛选");
-    const options = new Map();
-    for (const model of [null, ...g.modelFilters]) {
-      const link = document.createElement("a");
-      link.href = model === null ? "#" + g.slug : `#${g.slug}-${model}`;
-      link.textContent = model === null ? "全部" : g.slug === "hydra-gen2" ? `Hydra ${model} Gen2` : `Cobra ${model}`;
-      if (model !== null) modelRoutes.set(link.hash, {slug: g.slug, model});
-      options.set(model, link);
-      filters.appendChild(link);
-    }
-    sec.insertBefore(filters, grid);
-    modelGroups.set(g.slug, {sec, options, cards});
+
+/* ---------- i18n ---------- */
+const T = {
+  zh: {
+    h1: "产品图库", intro: "OneLaser 全系列产品原图，按机型分类。点击图片查看大图，可复制直链（URL / Markdown / HTML）或下载原图；每个机型都可以整组打包下载。",
+    imgs: "张原图", groups: "个分类", size: "原图总大小", allzip: "下载全部原图 ZIP · 686 MB", repo: "GitHub 仓库",
+    search: "搜索图片名或型号…  按 / 快速搜索", empty: "没有匹配的图片", foot: "来源：Figma「OneLaser Products」+ KeyShot 渲染 · 更新于",
+    n: n => `${n} 张`, copyGroup: "复制本组直链", copyModel: "复制当前型号直链", zip: "下载 ZIP", all: "全部",
+    copy: "复制链接", cUrl: "图片直链 URL", cPage: "本图预览页链接", download: "下载原图", copied: "已复制", copiedN: n => `已复制 ${n} 条直链`,
+    orig: "原名", big: "大图", small: "小图", theme: "切换深浅色",
+    titles: { "all": "全系列", "logo-brand": "品牌 & Logo" },
+  },
+  en: {
+    h1: "Product Image Library", intro: "Original OneLaser product images, grouped by machine. Click any image to view it full size, copy a direct link (URL / Markdown / HTML) or download the original. Each machine can also be downloaded as one ZIP.",
+    imgs: "original images", groups: "categories", size: "total size", allzip: "Download all · ZIP 686 MB", repo: "GitHub repo",
+    search: "Search name or model…  press / to focus", empty: "No matching images", foot: "Source: Figma “OneLaser Products” + KeyShot renders · Updated",
+    n: n => `${n} images`, copyGroup: "Copy all links", copyModel: "Copy links for this model", zip: "Download ZIP", all: "All",
+    copy: "Copy link", cUrl: "Direct image URL", cPage: "Link to this preview", download: "Download original", copied: "Copied", copiedN: n => `Copied ${n} links`,
+    orig: "Original name", big: "Large", small: "Compact", theme: "Toggle theme",
+    titles: { "all": "All Products", "logo-brand": "Logo & Brand" },
+  },
+};
+const store = { get: k => { try { return localStorage.getItem(k) } catch { return null } }, set: (k, v) => { try { localStorage.setItem(k, v) } catch {} } };
+const qsLang = new URLSearchParams(location.search).get("lang");
+let lang = ["zh", "en"].includes(qsLang) ? qsLang : store.get("lang") || ((navigator.language || "").toLowerCase().startsWith("zh") ? "zh" : "en");
+const t = k => T[lang][k];
+
+/* ---------- helpers ---------- */
+const enc = p => p.split("/").map(encodeURIComponent).join("/");
+const url = f => RAW + enc(f);
+const $ = s => document.querySelector(s);
+const fmt = kb => kb > 1024 ? (kb / 1024).toFixed(1) + " MB" : kb + " KB";
+const base = f => f.split("/").pop().replace(/\.[^.]+$/, "");
+const hasCJK = s => /[㐀-鿿]/.test(s);
+const JUNK = /^(微信图片|image\b|ChatGPT Image|Frame\b|[0-9a-f]{20,}|[0-9A-F]{8}-[0-9A-F]{4}|\d+(-\d+)?$|按新尺寸|Hydra-Gen2-Gemini)/i;
+const groups = DATA.filter(g => g.items.length);
+const gTitle = g => T[lang].titles[g.slug] || g.group;
+const modelName = (g, m) => g.slug === "hydra-gen2" ? `Hydra ${m} Gen2` : g.slug === "cobra" ? `Cobra ${m}` : `${g.group} ${m}`;
+/* tidy label from filename, e.g. hydra-gen2-7-003 -> "Hydra 7 Gen2 · 003" */
+function autoLabel(g, it) {
+  const num = (base(it.file).match(/(\d{3})$/) || [])[1] || "";
+  const head = it.model != null ? modelName(g, it.model) : gTitle(g);
+  return num ? `${head} · ${num}` : head;
+}
+function label(g, it) {
+  const n = (it.name || "").replace(/\s*拷贝\s*$/, "").replace(/\s{2,}/g, " ").trim();
+  if (!n || JUNK.test(n)) return autoLabel(g, it);
+  if (lang === "en" && hasCJK(n)) {
+    const en = n.replace(/正面渲染/, "Front render").replace(/白底图/, "White-background").replace(/渲染/, "Render");
+    return hasCJK(en) ? autoLabel(g, it) : en;
   }
+  return n;
+}
+
+/* ---------- build DOM ---------- */
+const flat = [];
+const modelRoutes = new Map(); // "#hydra-gen2-7" -> {slug, model}
+groups.forEach(g => {
+  $("#ov").insertAdjacentHTML("beforeend", `<a class="mc" href="#${g.slug}"><div class="cv"><img loading="lazy" src="${enc((g.items.find(i => i.w >= i.h) || g.items[0]).thumb)}" alt=""></div><div class="tx"><b data-g="${g.slug}"></b><span data-n="${g.items.length}"></span></div></a>`);
+  $("#tabs").insertAdjacentHTML("beforeend", `<a href="#${g.slug}" data-s="${g.slug}"><b data-g="${g.slug}" style="font-weight:inherit"></b><span>${g.items.length}</span></a>`);
+
+  const sec = document.createElement("section"); sec.id = g.slug;
+  sec.innerHTML = `<div class="sh"><h2 data-g="${g.slug}"></h2><span class="n"><span data-n="${g.items.length}"></span> · ${fmt(g.items.reduce((a, i) => a + i.kb, 0))}</span>
+    <button class="btn" data-copy="${g.slug}"></button>
+    ${g.zip ? `<a class="btn" href="${g.zip}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16"/></svg><span data-i="zip"></span> · ${g.zipmb} MB</a>` : ""}</div>`;
+  if (g.modelFilters) {
+    const f = document.createElement("div"); f.className = "filters"; f.role = "group";
+    [null, ...g.modelFilters].forEach(m => {
+      const a = document.createElement("a");
+      a.href = m === null ? `#${g.slug}` : `#${g.slug}-${m}`;
+      a.dataset.model = m === null ? "" : m;
+      if (m === null) a.dataset.i = "all"; else { a.textContent = modelName(g, m); modelRoutes.set(a.hash, { slug: g.slug, model: m }); }
+      f.appendChild(a);
+    });
+    sec.appendChild(f);
+  }
+  const grid = document.createElement("div"); grid.className = "grid"; sec.appendChild(grid);
   g.items.forEach(it => {
-    const c = document.createElement("div"); c.className = "card";
-    const i = flat.push({...it, group: g.title, slug: g.slug, card: c}) - 1;
-    cards.push(flat[i]);
-    c.innerHTML = `<div class="im"><img loading="lazy" src="${assetPath(it.thumb)}" alt=""></div><div class="meta"><div class="nm"></div><div class="dm">${it.w}×${it.h} · ${it.kb > 1024 ? (it.kb/1024).toFixed(1)+" MB" : it.kb+" KB"}</div></div>`;
-    c.querySelector(".nm").textContent = it.name; c.querySelector("img").alt = it.name;
+    const i = flat.push({ ...it, g }) - 1;
+    const c = document.createElement("button"); c.className = "card"; c.dataset.i = i;
+    c.innerHTML = `<div class="im"><img loading="lazy" decoding="async" src="${enc(it.thumb)}" alt=""></div><div class="meta"><div class="nm"></div><div class="dm">${it.w}×${it.h} · ${fmt(it.kb)}</div></div>`;
+    const im = c.querySelector("img"); im.onload = () => im.classList.add("ok"); if (im.complete) im.classList.add("ok");
     c.onclick = () => open(i);
+    flat[i].card = c;
     grid.appendChild(c);
   });
-  main.appendChild(sec);
+  $("#main").appendChild(sec);
 });
-let selectedModel;
-function applyModelFilter() {
-  selectedModel = modelRoutes.get(location.hash);
-  for (const [slug, {sec, options, cards}] of modelGroups) {
-    const model = selectedModel?.slug === slug ? selectedModel.model : null;
-    for (const [value, link] of options) {
-      if (value === model) link.setAttribute("aria-current", "true");
-      else link.removeAttribute("aria-current");
-    }
-    const visible = cards.filter(item => {
-      item.card.hidden = model !== null && item.model !== model;
-      return !item.card.hidden;
+
+/* ---------- apply language ---------- */
+function applyLang() {
+  document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
+  document.querySelectorAll("[data-i]").forEach(el => { const v = t(el.dataset.i); if (typeof v === "string") el.textContent = v; });
+  document.querySelectorAll("[data-g]").forEach(el => el.textContent = gTitle(groups.find(g => g.slug === el.dataset.g)));
+  document.querySelectorAll("[data-n]").forEach(el => el.textContent = t("n")(+el.dataset.n));
+  document.querySelectorAll(".lang button").forEach(b => b.classList.toggle("on", b.dataset.lang === lang));
+  $("#q").placeholder = t("search");
+  $("#big").title = t("big"); $("#small").title = t("small"); $("#theme").title = t("theme");
+  const total = flat.length, mb = flat.reduce((a, i) => a + i.kb, 0) / 1024;
+  $("#stats").innerHTML = `<div><b>${total}</b><span>${t("imgs")}</span></div><div><b>${groups.length}</b><span>${t("groups")}</span></div><div><b>${(mb / 1024).toFixed(2)} GB</b><span>${t("size")}</span></div>`;
+  flat.forEach(it => {
+    it.label = label(it.g, it);
+    const nm = it.card.querySelector(".nm"); nm.textContent = it.label; nm.title = it.name;
+    it.card.querySelector("img").alt = it.label;
+    it.q = [it.label, it.name, gTitle(it.g), it.g.group, it.model != null ? modelName(it.g, it.model) : "", base(it.file)].join(" ").toLowerCase();
+  });
+  updateCopyLabels();
+  if (cur >= 0) open(cur, false);
+}
+document.querySelectorAll(".lang button").forEach(b => b.onclick = () => {
+  lang = b.dataset.lang; store.set("lang", lang);
+  const u = new URL(location.href); u.searchParams.delete("lang"); history.replaceState(null, "", u);
+  applyLang();
+});
+
+/* ---------- filtering: model chips + search ---------- */
+let selModel = null, query = "";
+function applyFilters() {
+  let any = false;
+  groups.forEach(g => {
+    const sec = document.getElementById(g.slug);
+    const m = selModel && selModel.slug === g.slug ? selModel.model : null;
+    sec.querySelectorAll(".filters a").forEach(a => a.setAttribute("aria-current", String((a.dataset.model === "" ? null : +a.dataset.model) === m)));
+    let n = 0;
+    flat.filter(it => it.g === g).forEach(it => {
+      const show = (m === null || it.model === m) && (!query || it.q.includes(query));
+      it.card.hidden = !show; if (show) n++;
     });
-    sec.querySelector(".n").textContent = `${visible.length} 张`;
-    sec.querySelector("[data-copy]").textContent = model === null ? "复制本组全部链接" : "复制当前型号链接";
-  }
-  if (selectedModel) modelGroups.get(selectedModel.slug).sec.scrollIntoView();
+    sec.hidden = n === 0; if (n) any = true;
+  });
+  $("#empty").hidden = any;
+  updateCopyLabels();
 }
-addEventListener("hashchange", applyModelFilter);
-applyModelFilter();
-const toast = m => { const t = document.getElementById("toast"); t.textContent = m; t.classList.add("show"); clearTimeout(t._h); t._h = setTimeout(() => t.classList.remove("show"), 1400); };
-const copy = async s => { try { await navigator.clipboard.writeText(s); toast("已复制"); } catch { prompt("复制下面的内容", s); } };
+function updateCopyLabels() {
+  document.querySelectorAll("[data-copy]").forEach(b => b.textContent = selModel && selModel.slug === b.dataset.copy ? t("copyModel") : t("copyGroup"));
+}
+function route() {
+  selModel = modelRoutes.get(location.hash) || null;
+  applyFilters();
+  if (selModel) document.getElementById(selModel.slug).scrollIntoView();
+}
+addEventListener("hashchange", route);
+$("#q").addEventListener("input", e => { query = e.target.value.trim().toLowerCase(); applyFilters(); });
+
+/* ---------- copy ---------- */
+const toast = m => { const el = $("#toast"); el.textContent = m; el.classList.add("show"); clearTimeout(el._h); el._h = setTimeout(() => el.classList.remove("show"), 1500); };
+const copy = async (s, m) => { try { await navigator.clipboard.writeText(s); toast(m || t("copied")); } catch { prompt("", s); } };
 document.querySelectorAll("[data-copy]").forEach(b => b.onclick = () => {
-  copy(flat.filter(it => it.slug === b.dataset.copy && !it.card.hidden).map(it => url(it.file)).join("\n"));
+  const list = flat.filter(it => it.g.slug === b.dataset.copy && !it.card.hidden);
+  copy(list.map(it => url(it.file)).join("\n"), t("copiedN")(list.length));
 });
-let cur = 0; const lb = document.getElementById("lb");
-function open(i){ cur = (i + flat.length) % flat.length; const it = flat[cur];
-  document.getElementById("lbi").src = url(it.file);
-  document.getElementById("lbt").textContent = `${it.group} · ${it.name} (${it.w}×${it.h})`;
-  const d = document.getElementById("lbd"); d.href = assetPath(it.file); d.setAttribute("download", it.file.split("/").pop());
-  lb.classList.add("show"); }
-function step(offset) {
-  const slug = flat[cur].slug;
-  const inModel = selectedModel?.slug === slug;
-  const visible = flat.filter(it => !it.card.hidden && (!inModel || it.slug === slug));
-  if (!visible.length) return;
-  const current = visible.indexOf(flat[cur]);
-  const next = visible[(current + offset + visible.length) % visible.length];
-  open(flat.indexOf(next));
+
+/* ---------- density + theme ---------- */
+const setDense = d => { document.body.classList.toggle("dense", d); $("#small").classList.toggle("on", d); $("#big").classList.toggle("on", !d); store.set("dense", d ? "1" : "0"); };
+$("#big").onclick = () => setDense(false); $("#small").onclick = () => setDense(true);
+if (store.get("dense") === "1") setDense(true);
+const th = store.get("theme"); if (th) document.documentElement.dataset.theme = th;
+$("#theme").onclick = () => {
+  const r = document.documentElement, dark = r.dataset.theme ? r.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+  r.dataset.theme = dark ? "light" : "dark"; store.set("theme", r.dataset.theme);
+};
+
+/* ---------- lightbox ---------- */
+let cur = -1; const lb = $("#lb"), lbi = $("#lbi");
+const visible = () => flat.map((it, i) => i).filter(i => !flat[i].card.hidden);
+function open(i, fresh = true) {
+  cur = i; const it = flat[i], pos = visible(), j = pos.indexOf(i);
+  lb.classList.add("show"); document.body.style.overflow = "hidden";
+  if (fresh) {
+    lb.classList.add("loading"); lbi.src = enc(it.thumb);
+    const full = new Image(); full.onload = () => { if (cur === i) { lbi.src = full.src; lb.classList.remove("loading"); } }; full.src = url(it.file);
+    [1, -1].forEach(s => { const n = pos[(j + s + pos.length) % pos.length]; if (n != null && n !== i) new Image().src = url(flat[n].file); });
+    history.replaceState(null, "", "#img=" + base(it.file));
+  }
+  $("#lbt").textContent = it.label;
+  $("#lbs").textContent = [gTitle(it.g), j >= 0 ? `${j + 1} / ${pos.length}` : "", `${it.w}×${it.h}`, fmt(it.kb), it.name && it.name !== it.label ? `${t("orig")}: ${it.name}` : ""].filter(Boolean).join(" · ");
+  const d = $("#lbd"); d.href = url(it.file); d.setAttribute("download", it.file.split("/").pop());
 }
-document.getElementById("lbx").onclick = () => lb.classList.remove("show");
-document.getElementById("lbp").onclick = () => step(-1);
-document.getElementById("lbn").onclick = () => step(1);
-document.getElementById("lbc").onclick = () => copy(url(flat[cur].file));
-lb.querySelector(".stage").onclick = e => { if (e.target === e.currentTarget) lb.classList.remove("show"); };
-addEventListener("keydown", e => { if (!lb.classList.contains("show")) return; if (e.key === "Escape") lb.classList.remove("show"); if (e.key === "ArrowLeft") step(-1); if (e.key === "ArrowRight") step(1); });
-const links = [...nav.querySelectorAll("a")];
-const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { links.forEach(a => a.classList.toggle("on", a.dataset.s === e.target.id)); const a = links.find(a => a.dataset.s === e.target.id); a && a.scrollIntoView({inline: "nearest", block: "nearest"}); } }), {rootMargin: "-60px 0px -70% 0px"});
+function step(s) { const pos = visible(), j = pos.indexOf(cur); if (j >= 0) open(pos[(j + s + pos.length) % pos.length]); }
+function close() {
+  lb.classList.remove("show"); document.body.style.overflow = ""; $("#cm").classList.remove("open");
+  if (cur >= 0) history.replaceState(null, "", selModel ? `#${selModel.slug}-${selModel.model}` : `#${flat[cur].g.slug}`);
+  cur = -1;
+}
+$("#lbx").onclick = close;
+$("#lbp").onclick = e => { e.stopPropagation(); step(-1); };
+$("#lbn").onclick = e => { e.stopPropagation(); step(1); };
+$("#stage").onclick = e => { if (e.target.id === "stage") close(); };
+$("#cmb").onclick = e => { e.stopPropagation(); $("#cm").classList.toggle("open"); };
+document.querySelectorAll("#cm .pop button").forEach(b => b.onclick = () => {
+  const it = flat[cur], u = url(it.file);
+  copy({ url: u, md: `![${it.label}](${u})`, html: `<img src="${u}" alt="${it.label.replace(/"/g, "&quot;")}" width="${it.w}" height="${it.h}">`,
+         page: location.origin + location.pathname + (lang === "en" ? "?lang=en" : "") + "#img=" + base(it.file) }[b.dataset.f]);
+  $("#cm").classList.remove("open");
+});
+addEventListener("click", e => { if (!e.target.closest("#cm")) $("#cm").classList.remove("open"); });
+addEventListener("keydown", e => {
+  if (lb.classList.contains("show")) { if (e.key === "Escape") close(); else if (e.key === "ArrowLeft") step(-1); else if (e.key === "ArrowRight") step(1); }
+  else if (e.key === "/" && document.activeElement !== $("#q")) { e.preventDefault(); $("#q").focus(); }
+});
+let tx = null; const st = $("#stage");
+st.addEventListener("touchstart", e => { tx = e.touches[0].clientX; }, { passive: true });
+st.addEventListener("touchend", e => { if (tx == null) return; const dx = e.changedTouches[0].clientX - tx; if (Math.abs(dx) > 50) step(dx < 0 ? 1 : -1); tx = null; });
+
+/* ---------- active tab ---------- */
+const links = [...document.querySelectorAll("#tabs a")];
+const io = new IntersectionObserver(es => es.forEach(e => {
+  if (!e.isIntersecting) return;
+  links.forEach(a => a.classList.toggle("on", a.dataset.s === e.target.id));
+  const a = links.find(a => a.dataset.s === e.target.id);
+  if (a) { const tb = $("#tabs"); tb.scrollTo({ left: a.offsetLeft - tb.clientWidth / 2 + a.clientWidth / 2, behavior: "smooth" }); }
+}), { rootMargin: "-70px 0px -70% 0px" });
 document.querySelectorAll("section").forEach(s => io.observe(s));
+
+/* ---------- init ---------- */
+applyLang();
+route();
+const im = location.hash.match(/^#img=(.+)$/);
+if (im) { const i = flat.findIndex(f => base(f.file) === decodeURIComponent(im[1])); if (i >= 0) { flat[i].card.scrollIntoView({ block: "center" }); open(i); } }
 </script>
 </body>
 </html>
