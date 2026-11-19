@@ -1,13 +1,15 @@
 # OneLaser Product Images
 
-按机型分类的 OneLaser 产品图，共 228 张，包含 Figma 导出图和 KeyShot 渲染图。
+按机型分类的 OneLaser 产品图，共 189 张，包含 Figma 导出图和 KeyShot 渲染图。
+
+只收录白底产品图和产品细节图；场景图已移到 `archive/`（不发布）。
 
 预览网页：https://yonge6.github.io/onelaser-product-images/
 
 图片文件名使用系列、可确认的型号和三位编号。例如 `cobra-8-001.png`。 [命名调整前的图片目录](https://github.com/Yonge6/onelaser-product-images/tree/20e38b66f4eb6ba6ae1e95bbe931b98db98fb175)
 
 
-## All Products 全系列（16）
+## All Products 全系列（11）
 
 - [总统日H7渲染.87](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/all/all-001.png)
 - [微信图片_20260610174503_49_846](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/all/all-002.png)
@@ -20,13 +22,8 @@
 - [微信图片_20260710171302_471_138](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/all/all-009.png)
 - [微信图片_20260710171303_472_138](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/all/all-010.png)
 - [微信图片_20260717115449_479_138](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/all/all-011.png)
-- [ChatGPT Image 2026年7月10日 17_21_43](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/all/all-012.png)
-- [4Products](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/all/all-013.png)
-- [按新尺寸生成图片 (1)](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/all/all-014.png)
-- [ChatGPT Image 2026年6月11日 09_58_48](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/all/all-015.png)
-- [ChatGPT Image 2026年6月12日 15_48_38](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/all/all-016.png)
 
-## XRF Gen2（24）
+## XRF Gen2（22）
 
 - [OneLaser_XRF_Product_3D_Gen2Render01_EN_v1](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/xrf-gen2/xrf-gen2-001.png)
 - [OneLaser_XRF_Product_3D_Gen2Render02_EN_v1](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/xrf-gen2/xrf-gen2-002.png)
@@ -50,10 +47,8 @@
 - [iwEcAqNwbmcDAQTRAeEF0QMhBrBOMlxiWl3kWwofPhtGYIsAB9MAAAABATljxAgACaJpbQoAC9F6HA](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/xrf-gen2/xrf-gen2-020.png)
 - [OneLaser_XRFGen2_Product_3D_Render12_EN_v1 1](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/xrf-gen2/xrf-gen2-021.png)
 - [iwEcAqNwbmcDAQTRAeAF0QMdBrDXr2eTXo6h0QofPhtDxdEAB9MAAAABATljxAgACaJpbQoAC9IAAJCL](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/xrf-gen2/xrf-gen2-022.png)
-- [ChatGPT Image 2026年7月6日 15_42_26](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/xrf-gen2/xrf-gen2-023.png)
-- [ChatGPT Image 2026年6月24日 17_46_10 (2) (1)](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/xrf-gen2/xrf-gen2-024.png)
 
-## XRF（22）
+## XRF（12）
 
 - [XRF3](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/xrf/xrf-001.jpg)
 - [image](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/xrf/xrf-002.png)
@@ -67,18 +62,8 @@
 - [image（5）](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/xrf/xrf-010.png)
 - [fddf901a387dd70a51552a0568ece86d_926fba2b-73e0-4d2a-9f1c-b413173bc4f5(2)](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/xrf/xrf-011.png)
 - [image（6）](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/xrf/xrf-012.png)
-- [XRF-ChatGPT Image 2026年5月6日 16_35_33](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/xrf/xrf-013.png)
-- [ChatGPT Image 2026年5月15日 11_01_43](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/xrf/xrf-014.png)
-- [XRF-ChatGPT Image 2026年5月6日 16_35_22](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/xrf/xrf-015.png)
-- [XRF带基座jimeng-2025-12-02-3541-超写实3D渲染，电影级布光（暖调环境光+局部冷光点缀），中景视角、居中构图；场景_](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/xrf/xrf-016.png)
-- [XRFjimeng-2025-12-26-7701-在一间美式车库workshop里，浅棕色的木质工作台上摆着一台ONELASER_](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/xrf/xrf-017.png)
-- [Education教学实验室激光雕刻作品场景](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/xrf/xrf-018.png)
-- [Gemini_Generated_Image_fhnpb4fhnpb4fhnp](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/xrf/xrf-019.png)
-- [image](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/xrf/xrf-020.png)
-- [ChatGPT Image 2026年5月15日 11_01_43 1](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/xrf/xrf-021.png)
-- [ChatGPT Image 2026年7月6日 17_38_53](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/xrf/xrf-022.png)
 
-## VertiGo（17）
+## VertiGo（10）
 
 - [VertiGo2](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/vertigo/vertigo-001.png)
 - [VertiGo1](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/vertigo/vertigo-002.png)
@@ -89,16 +74,9 @@
 - [VertiGo7](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/vertigo/vertigo-007.png)
 - [VertiGo8](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/vertigo/vertigo-008.png)
 - [开盖](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/vertigo/vertigo-009.png)
-- [Rectangle 763](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/vertigo/vertigo-010.png)
-- [分组 13](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/vertigo/vertigo-011.png)
-- [画板 1 4](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/vertigo/vertigo-012.png)
 - [12image](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/vertigo/vertigo-013.png)
-- [Rectangle 818](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/vertigo/vertigo-014.png)
-- [quality_restoration_20251006104146110](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/vertigo/vertigo-015.png)
-- [VertiGoGemini_Generated_Image_j2jwuvj2jwuvj2jw](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/vertigo/vertigo-016.png)
-- [image](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/vertigo/vertigo-017.png)
 
-## Hydra Gen2（47）
+## Hydra Gen2（42）
 
 [Hydra 7 Gen2](https://yonge6.github.io/onelaser-product-images/#hydra-gen2-7) · [Hydra 9 Gen2](https://yonge6.github.io/onelaser-product-images/#hydra-gen2-9) · [Hydra 13 Gen2](https://yonge6.github.io/onelaser-product-images/#hydra-gen2-13) · [Hydra 16 Gen2](https://yonge6.github.io/onelaser-product-images/#hydra-gen2-16)
 
@@ -138,11 +116,6 @@
 - [16](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/hydra-gen2/hydra-gen2-16-005.jpg)
 - [Hydra 16](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/hydra-gen2/hydra-gen2-16-006.jpg)
 - [Hydra 16 拷贝](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/hydra-gen2/hydra-gen2-16-007.png)
-- [Product_Hdyra9Gen2_2026Q2_1](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/hydra-gen2/hydra-gen2-9-009.png)
-- [Hydra-Gen2-Gemini_Generated_Image_lh4b7vlh4b7vlh4b](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/hydra-gen2/hydra-gen2-001.png)
-- [按新尺寸生成图片 (1)](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/hydra-gen2/hydra-gen2-9-010.png)
-- [Hydra9场景图jimeng-2025-12-08-8731-电商风格，超写实3D渲染，电影级暗调氛围，低平视视角。场景为美国工业风家庭车库：_](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/hydra-gen2/hydra-gen2-9-011.png)
-- [ChatGPT Image 2026年7月7日 10_20_22](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/hydra-gen2/hydra-gen2-002.png)
 - [878fa8e67dfa81609b52de94a1bfcdb4](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/hydra-gen2/hydra-gen2-9-012.png)
 - [微信图片_20260917150855_64_277](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/hydra-gen2/hydra-gen2-003.jpg)
 - [微信图片_20260917150857_65_277](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/hydra-gen2/hydra-gen2-004.png)
@@ -150,7 +123,7 @@
 - [微信图片_20260917154003_67_277](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/hydra-gen2/hydra-gen2-9-013.png)
 - [微信图片_20260917154916_68_277](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/hydra-gen2/hydra-gen2-9-014.png)
 
-## Cobra（34）
+## Cobra（33）
 
 [Cobra 8](https://yonge6.github.io/onelaser-product-images/#cobra-8) · [Cobra 10](https://yonge6.github.io/onelaser-product-images/#cobra-10) · [Cobra 14](https://yonge6.github.io/onelaser-product-images/#cobra-14)
 
@@ -187,9 +160,8 @@
 - [Cobra14渲染.bip.84](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/cobra/cobra-14-007.png)
 - [Cobra14渲染.bip.76](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/cobra/cobra-14-008.png)
 - [Cobra系列Banner 1](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/cobra/cobra-003.png)
-- [image](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/cobra/cobra-10-010.png)
 
-## Viper（13）
+## Viper（9）
 
 - [右侧-下降](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/viper/viper-001.png)
 - [右侧-门盖上升](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/viper/viper-002.png)
@@ -200,10 +172,6 @@
 - [左侧](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/viper/viper-007.png)
 - [左俯视-上升](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/viper/viper-008.png)
 - [右侧-门盖上升 1](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/viper/viper-009.png)
-- [banner](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/viper/viper-010.png)
-- [Rectangle](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/viper/viper-011.png)
-- [Rectangle](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/viper/viper-012.png)
-- [image](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/viper/viper-013.png)
 
 ## YRF（5）
 
@@ -213,7 +181,7 @@
 - [微信图片_20260709160303_454_138](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/yrf/yrf-004.png)
 - [微信图片_20260709160301_452_138](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/yrf/yrf-005.png)
 
-## Galvo Flex（40）
+## Galvo Flex（39）
 
 - [后侧](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/galvo-flex/galvo-flex-001.png)
 - [5W UV＋](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/galvo-flex/galvo-flex-002.png)
@@ -240,7 +208,6 @@
 - [仰角雕刻状态](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/galvo-flex/galvo-flex-023.png)
 - [右侧](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/galvo-flex/galvo-flex-024.png)
 - [右俯视](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/galvo-flex/galvo-flex-025.png)
-- [image](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/galvo-flex/galvo-flex-026.png)
 - [后侧](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/galvo-flex/galvo-flex-027.png)
 - [后视](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/galvo-flex/galvo-flex-028.png)
 - [右侧](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/galvo-flex/galvo-flex-029.png)
@@ -256,15 +223,11 @@
 - [image](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/galvo-flex/galvo-flex-039.png)
 - [image](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/galvo-flex/galvo-flex-040.png)
 
-## Logo & Brand（10）
+## Logo & Brand（6）
 
 - [icon-4](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/logo-brand/logo-brand-001.png)
 - [image](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/logo-brand/logo-brand-002.png)
 - [image](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/logo-brand/logo-brand-003.png)
-- [C77A03FE-9BFC-4dc6-AA2C-4B915B4AF520](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/logo-brand/logo-brand-004.png)
-- [CC547EA2-B877-4f21-874C-BA5BA6941E6F](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/logo-brand/logo-brand-005.png)
-- [ChatGPT Image 2026年7月18日 11_31_47](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/logo-brand/logo-brand-006.png)
 - [3c61f9ba7171751f27df57a55de10f87](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/logo-brand/logo-brand-007.png)
 - [688ba087719f1e5d50fa1ad7b4e2f453](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/logo-brand/logo-brand-008.png)
 - [8fbdc60c48d17a6bc592331a9c4fc474](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/logo-brand/logo-brand-009.png)
-- [4Products](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/logo-brand/logo-brand-010.png)

@@ -3,6 +3,17 @@
 This repo is the OneLaser product image library, published at
 https://yonge6.github.io/onelaser-product-images/ by `.github/workflows/build.yml` on every push to `main`.
 
+## What belongs here (content rule, set by the owner 2026-11-19)
+
+Only **white-background product shots** and **product detail shots** (close-ups of laser head, gantry,
+control panel, touchscreen UI, components). These are the raw material colleagues use for the website,
+store pages and AI-generated ads.
+
+**No scene / lifestyle / ad images**: workshops, garages, classrooms, shops, people, office or team photos,
+dark studio "hero" renders, banners or posters, spec tables. Put those in `archive/<series>/` (and their
+thumbnails in `archive/thumbs/<series>/`) and record them in `archive/archive.json`. `archive/` is kept in
+git but is not published and not zipped.
+
 ## What to edit
 
 | You want to… | Edit | Don't touch |
