@@ -225,7 +225,18 @@ const $ = s => document.querySelector(s);
 const fmt = kb => kb > 1024 ? (kb / 1024).toFixed(1) + " MB" : kb + " KB";
 const base = f => f.split("/").pop().replace(/\.[^.]+$/, "");
 const hasCJK = s => /[㐀-鿿]/.test(s);
-const JUNK = /^(微信图片|image\b|ChatGPT Image|Frame\b|[0-9a-f]{20,}|[0-9A-F]{8}-[0-9A-F]{4}|\d+(-\d+)?$|按新尺寸|Hydra-Gen2-Gemini)/i;
+const JUNK = /^(微信图片|image\b|\d+image|ChatGPT Image|Frame\b|Rectangle\b|分组|画板|quality_restoration|iwE[A-Za-z0-9]{20,}|[0-9a-f]{20,}|[0-9A-F]{8}-[0-9A-F]{4}|\d+(-\d+)?$|按新尺寸|[\w-]*Gemini_Generated|icon-\d)/i;
+/* zh -> en terms, longest first */
+const DICT = [
+  ["教学实验室激光雕刻作品场景", " Education lab engraving scene"], ["仰角雕刻状态", "Low-angle engraving"], ["取下操作屏", "control panel removed"],
+  ["门盖上升", "lid raised"], ["早期渲染", "Early render"], ["正面渲染", "Front render"], ["白底图", " white background"], ["场景图", " scene"],
+  ["正右侧", "Front-right side"], ["侧后视", "Rear-side view"], ["正后视", "Rear view"], ["右俯视", "Right top view"], ["左俯视", "Left top view"],
+  ["右侧视", "Right side view"], ["正右视", "Front-right view"], ["旧标", "old label "], ["系列", " series "], ["渲染", " render"],
+  ["正视", "Front view"], ["后视", "Rear view"], ["右视", "Right view"], ["左视", "Left view"], ["右侧", "Right side"], ["左侧", "Left side"],
+  ["后侧", "Rear side"], ["侧后", "Rear side"], ["俯视", "top view"], ["正面", "front"], ["上升", "raised"], ["下降", "lowered"],
+  ["开盖", "Lid open"], ["带基座", " with base "], ["烟", " smoke"], ["总统日", "Presidents' Day "], ["（", " ("], ["）", ")"], ["，", ", "],
+];
+const toEn = s => DICT.reduce((a, [z, e]) => a.split(z).join(e), s).replace(/\s{2,}/g, " ").replace(/\s+([,)])/g, "$1").trim();
 const groups = DATA.filter(g => g.items.length);
 const gTitle = g => T[lang].titles[g.slug] || g.group;
 const modelName = (g, m) => g.slug === "hydra-gen2" ? `Hydra ${m} Gen2` : g.slug === "cobra" ? `Cobra ${m}` : `${g.group} ${m}`;
@@ -236,13 +247,16 @@ function autoLabel(g, it) {
   return num ? `${head} · ${num}` : head;
 }
 function label(g, it) {
-  const n = (it.name || "").replace(/\s*拷贝\s*$/, "").replace(/\s{2,}/g, " ").trim();
-  if (!n || JUNK.test(n)) return autoLabel(g, it);
+  let n = (it.name || "").replace(/\s*拷贝\s*$/, "").replace(/\s+\d$/, "").replace(/\s{2,}/g, " ").trim();
+  if (!n || JUNK.test(n) || n.length > 40 || /jimeng/i.test(n)) return autoLabel(g, it);
+  const head = it.model != null ? modelName(g, it.model) : gTitle(g);
+  const angleOnly = /^[㐀-鿿\-－]+$/.test(n);           // e.g. 右侧-门盖上升 → needs the machine name
   if (lang === "en" && hasCJK(n)) {
-    const en = n.replace(/正面渲染/, "Front render").replace(/白底图/, "White-background").replace(/渲染/, "Render");
-    return hasCJK(en) ? autoLabel(g, it) : en;
+    const en = toEn(n).replace(/\s*-\s*/g, " – ");
+    if (hasCJK(en)) return autoLabel(g, it);
+    return angleOnly ? `${head} · ${en}` : en;
   }
-  return n;
+  return angleOnly ? `${head} · ${n}` : n;
 }
 
 /* ---------- build DOM ---------- */
