@@ -1,0 +1,76 @@
+name: Build gallery
+
+# Runs on every push to main (by people, Claude or Codex).
+# 1) re-zips only the series whose images changed  2) makes missing thumbnails
+# 3) renders index.html from images.json + tools/index.tpl.html  4) deploys to GitHub Pages
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      rezip_all:
+        description: "Rebuild every ZIP"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: gallery
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Which series changed?
+        id: changed
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            if [ "${{ inputs.rezip_all }}" = "true" ]; then echo "series=all" >> "$GITHUB_OUTPUT"; else echo "series=" >> "$GITHUB_OUTPUT"; fi
+            exit 0
+          fi
+          before="${{ github.event.before }}"
+          if [ -z "$before" ] || [ "$before" = "0000000000000000000000000000000000000000" ]; then
+            echo "series=all" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          files=$(gh api "repos/${{ github.repository }}/compare/${before}...${{ github.sha }}" --paginate -q '.files[].filename' || echo "__fail__")
+          if echo "$files" | grep -q "__fail__"; then echo "series=all" >> "$GITHUB_OUTPUT"; exit 0; fi
+          s=$(echo "$files" | sed -n 's#^images/\([^/]*\)/.*#\1#p' | sort -u | tr '\n' ' ')
+          echo "changed series: ${s:-none}"
+          echo "series=$s" >> "$GITHUB_OUTPUT"
+
+      - name: Refresh ZIPs
+        if: steps.changed.outputs.series != ''
+        run: bash tools/ci_zips.sh ${{ steps.changed.outputs.series }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Render page
+        run: |
+          pip install --quiet pillow
+          python tools/render.py
+
+      - name: Bundle site
+        run: |
+          mkdir -p _site
+          cp -r index.html images thumbs assets images.json README.md .nojekyll _site/ 2>/dev/null || true
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - id: deploy
+        uses: actions/deploy-pages@v4
