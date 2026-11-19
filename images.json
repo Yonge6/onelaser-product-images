@@ -670,7 +670,8 @@
     "thumb": "thumbs/hydra-gen2/hydra-7-gen2-front.jpg",
     "w": 2400,
     "h": 1650,
-    "kb": 1341
+    "kb": 1341,
+    "model": 7
    },
    {
     "name": "Hydra 9 Gen2 正面渲染",
@@ -678,7 +679,8 @@
     "thumb": "thumbs/hydra-gen2/hydra-9-gen2-front.jpg",
     "w": 2400,
     "h": 1650,
-    "kb": 1399
+    "kb": 1399,
+    "model": 9
    },
    {
     "name": "Hydra 13 Gen2 正面渲染",
@@ -686,7 +688,8 @@
     "thumb": "thumbs/hydra-gen2/hydra-13-gen2-front.jpg",
     "w": 2400,
     "h": 1650,
-    "kb": 1740
+    "kb": 1740,
+    "model": 13
    },
    {
     "name": "Hydra 16 Gen2 正面渲染",
@@ -694,7 +697,8 @@
     "thumb": "thumbs/hydra-gen2/hydra-16-gen2-front.jpg",
     "w": 2400,
     "h": 1650,
-    "kb": 1568
+    "kb": 1568,
+    "model": 16
    },
    {
     "name": "Hydra  7",
@@ -702,7 +706,8 @@
     "thumb": "thumbs/hydra-gen2/001-Hydra  7.jpg",
     "w": 1500,
     "h": 1500,
-    "kb": 628
+    "kb": 628,
+    "model": 7
    },
    {
     "name": "Hydra  7 拷贝",
@@ -710,7 +715,8 @@
     "thumb": "thumbs/hydra-gen2/002-Hydra  7 拷贝.jpg",
     "w": 1500,
     "h": 1500,
-    "kb": 925
+    "kb": 925,
+    "model": 7
    },
    {
     "name": "7",
@@ -718,7 +724,8 @@
     "thumb": "thumbs/hydra-gen2/003-7.jpg",
     "w": 2560,
     "h": 2276,
-    "kb": 581
+    "kb": 581,
+    "model": 7
    },
    {
     "name": "微信图片_20260916173924_54_277",
@@ -726,7 +733,8 @@
     "thumb": "thumbs/hydra-gen2/004-微信图片_20260916173924_54_277.jpg",
     "w": 2560,
     "h": 2276,
-    "kb": 3042
+    "kb": 3042,
+    "model": 9
    },
    {
     "name": "HydraGen2渲染.48",
@@ -734,7 +742,8 @@
     "thumb": "thumbs/hydra-gen2/005-HydraGen2渲染.48.jpg",
     "w": 3840,
     "h": 3413,
-    "kb": 7409
+    "kb": 7409,
+    "model": 9
    },
    {
     "name": "Hydra Gen2-9-1100x678-1",
@@ -742,7 +751,8 @@
     "thumb": "thumbs/hydra-gen2/006-Hydra Gen2-9-1100x678-1.jpg",
     "w": 1100,
     "h": 678,
-    "kb": 359
+    "kb": 359,
+    "model": 9
    },
    {
     "name": "Hydra Gen2-9-1100x678-2",
@@ -750,7 +760,8 @@
     "thumb": "thumbs/hydra-gen2/007-Hydra Gen2-9-1100x678-2.jpg",
     "w": 1100,
     "h": 678,
-    "kb": 303
+    "kb": 303,
+    "model": 9
    },
    {
     "name": "9",
@@ -758,7 +769,8 @@
     "thumb": "thumbs/hydra-gen2/008-9.jpg",
     "w": 2560,
     "h": 2276,
-    "kb": 570
+    "kb": 570,
+    "model": 9
    },
    {
     "name": "9-2",
@@ -766,7 +778,8 @@
     "thumb": "thumbs/hydra-gen2/009-9-2.jpg",
     "w": 2560,
     "h": 2276,
-    "kb": 432
+    "kb": 432,
+    "model": 9
    },
    {
     "name": "Hydra  9",
@@ -774,7 +787,8 @@
     "thumb": "thumbs/hydra-gen2/010-Hydra  9.jpg",
     "w": 1500,
     "h": 1500,
-    "kb": 710
+    "kb": 710,
+    "model": 9
    },
    {
     "name": "13",
@@ -782,7 +796,8 @@
     "thumb": "thumbs/hydra-gen2/011-13.jpg",
     "w": 2560,
     "h": 2276,
-    "kb": 729
+    "kb": 729,
+    "model": 13
    },
    {
     "name": "Hydra  13 拷贝",
@@ -790,7 +805,8 @@
     "thumb": "thumbs/hydra-gen2/012-Hydra  13 拷贝.jpg",
     "w": 1500,
     "h": 1500,
-    "kb": 1030
+    "kb": 1030,
+    "model": 13
    },
    {
     "name": "Hydra  13",
@@ -798,7 +814,8 @@
     "thumb": "thumbs/hydra-gen2/013-Hydra  13.jpg",
     "w": 1500,
     "h": 1500,
-    "kb": 691
+    "kb": 691,
+    "model": 13
    },
    {
     "name": "image",
@@ -806,7 +823,8 @@
     "thumb": "thumbs/hydra-gen2/014-image.jpg",
     "w": 1346,
     "h": 1346,
-    "kb": 370
+    "kb": 370,
+    "model": 13
    },
    {
     "name": "Hydra Gen2-16-1100x678-1",
@@ -814,7 +832,8 @@
     "thumb": "thumbs/hydra-gen2/015-Hydra Gen2-16-1100x678-1.jpg",
     "w": 1100,
     "h": 678,
-    "kb": 261
+    "kb": 261,
+    "model": 16
    },
    {
     "name": "Hydra Gen2-16-1100x678-2",
@@ -822,7 +841,8 @@
     "thumb": "thumbs/hydra-gen2/016-Hydra Gen2-16-1100x678-2.jpg",
     "w": 1100,
     "h": 678,
-    "kb": 302
+    "kb": 302,
+    "model": 16
    },
    {
     "name": "Hydra Gen2-16-1100x978",
@@ -830,7 +850,8 @@
     "thumb": "thumbs/hydra-gen2/017-Hydra Gen2-16-1100x978.jpg",
     "w": 1100,
     "h": 978,
-    "kb": 436
+    "kb": 436,
+    "model": 16
    },
    {
     "name": "16",
@@ -838,7 +859,8 @@
     "thumb": "thumbs/hydra-gen2/018-16.jpg",
     "w": 2560,
     "h": 2304,
-    "kb": 608
+    "kb": 608,
+    "model": 16
    },
    {
     "name": "Hydra 16",
@@ -846,7 +868,8 @@
     "thumb": "thumbs/hydra-gen2/019-Hydra 16.jpg",
     "w": 1500,
     "h": 1500,
-    "kb": 282
+    "kb": 282,
+    "model": 16
    },
    {
     "name": "Hydra 16 拷贝",
@@ -854,7 +877,8 @@
     "thumb": "thumbs/hydra-gen2/020-Hydra 16 拷贝.jpg",
     "w": 1500,
     "h": 1500,
-    "kb": 954
+    "kb": 954,
+    "model": 16
    },
    {
     "name": "Product_Hdyra9Gen2_2026Q2_1",
@@ -862,7 +886,8 @@
     "thumb": "thumbs/hydra-gen2/021-Product_Hdyra9Gen2_2026Q2_1.jpg",
     "w": 3840,
     "h": 1801,
-    "kb": 9018
+    "kb": 9018,
+    "model": 9
    },
    {
     "name": "Hydra-Gen2-Gemini_Generated_Image_lh4b7vlh4b7vlh4b",
@@ -878,7 +903,8 @@
     "thumb": "thumbs/hydra-gen2/023-按新尺寸生成图片 (1).jpg",
     "w": 1920,
     "h": 1080,
-    "kb": 1906
+    "kb": 1906,
+    "model": 9
    },
    {
     "name": "Hydra9场景图jimeng-2025-12-08-8731-电商风格，超写实3D渲染，电影级暗调氛围，低平视视角。场景为美国工业风家庭车库：_",
@@ -886,7 +912,8 @@
     "thumb": "thumbs/hydra-gen2/024-Hydra9场景图jimeng-2025-12-08-8731-电商风格，超写实3D渲染，电影级暗调氛围，低平视视角。场景为美国工业风家庭车库：_.jpg",
     "w": 3625,
     "h": 2039,
-    "kb": 6220
+    "kb": 6220,
+    "model": 9
    },
    {
     "name": "ChatGPT Image 2026年7月7日 10_20_22",
@@ -902,7 +929,8 @@
     "thumb": "thumbs/hydra-gen2/026-878fa8e67dfa81609b52de94a1bfcdb4.jpg",
     "w": 1920,
     "h": 1707,
-    "kb": 1448
+    "kb": 1448,
+    "model": 9
    },
    {
     "name": "微信图片_20260917150855_64_277",
@@ -934,7 +962,8 @@
     "thumb": "thumbs/hydra-gen2/030-微信图片_20260917154003_67_277.jpg",
     "w": 2560,
     "h": 2276,
-    "kb": 3617
+    "kb": 3617,
+    "model": 9
    },
    {
     "name": "微信图片_20260917154916_68_277",
@@ -942,8 +971,15 @@
     "thumb": "thumbs/hydra-gen2/031-微信图片_20260917154916_68_277.jpg",
     "w": 2560,
     "h": 2276,
-    "kb": 3544
+    "kb": 3544,
+    "model": 9
    }
+  ],
+  "modelFilters": [
+   7,
+   9,
+   13,
+   16
   ]
  },
  {
@@ -952,12 +988,40 @@
   "slug": "cobra",
   "items": [
    {
+    "name": "Cobra 8 正面渲染",
+    "file": "images/cobra/cobra-8-front.png",
+    "thumb": "thumbs/cobra/cobra-8-front.jpg",
+    "w": 2400,
+    "h": 1650,
+    "kb": 1378,
+    "model": 8
+   },
+   {
+    "name": "Cobra 10 正面渲染",
+    "file": "images/cobra/cobra-10-front.png",
+    "thumb": "thumbs/cobra/cobra-10-front.jpg",
+    "w": 2400,
+    "h": 1650,
+    "kb": 1739,
+    "model": 10
+   },
+   {
+    "name": "Cobra 14 正面渲染",
+    "file": "images/cobra/cobra-14-front.png",
+    "thumb": "thumbs/cobra/cobra-14-front.jpg",
+    "w": 2400,
+    "h": 1650,
+    "kb": 1717,
+    "model": 14
+   },
+   {
     "name": "image",
     "file": "images/cobra/001-image.png",
     "thumb": "thumbs/cobra/001-image.jpg",
     "w": 1200,
     "h": 1200,
-    "kb": 259
+    "kb": 259,
+    "model": 8
    },
    {
     "name": "image",
@@ -965,7 +1029,8 @@
     "thumb": "thumbs/cobra/002-image.jpg",
     "w": 1320,
     "h": 1320,
-    "kb": 357
+    "kb": 357,
+    "model": 8
    },
    {
     "name": "image",
@@ -973,10 +1038,11 @@
     "thumb": "thumbs/cobra/003-image.jpg",
     "w": 1320,
     "h": 1320,
-    "kb": 337
+    "kb": 337,
+    "model": 8
    },
    {
-    "name": "Cobra7渲染20251222.54",
+    "name": "Cobra 8 早期渲染（旧标 7，俯视）",
     "file": "images/cobra/004-Cobra7渲染20251222.54.png",
     "thumb": "thumbs/cobra/004-Cobra7渲染20251222.54.jpg",
     "w": 4000,
@@ -984,7 +1050,7 @@
     "kb": 3386
    },
    {
-    "name": "Cobra7渲染20251222.57",
+    "name": "Cobra 8 早期渲染（旧标 7，正面）",
     "file": "images/cobra/005-Cobra7渲染20251222.57.png",
     "thumb": "thumbs/cobra/005-Cobra7渲染20251222.57.jpg",
     "w": 4000,
@@ -997,7 +1063,8 @@
     "thumb": "thumbs/cobra/006-Cobra10渲染.60.jpg",
     "w": 4000,
     "h": 3500,
-    "kb": 3860
+    "kb": 3860,
+    "model": 10
    },
    {
     "name": "Cobra10渲染.63",
@@ -1005,7 +1072,8 @@
     "thumb": "thumbs/cobra/007-Cobra10渲染.63.jpg",
     "w": 4000,
     "h": 3500,
-    "kb": 3714
+    "kb": 3714,
+    "model": 10
    },
    {
     "name": "Cobra 10-2",
@@ -1013,7 +1081,8 @@
     "thumb": "thumbs/cobra/008-Cobra 10-2.jpg",
     "w": 1320,
     "h": 1320,
-    "kb": 135
+    "kb": 135,
+    "model": 10
    },
    {
     "name": "Cobra 10-3",
@@ -1021,7 +1090,8 @@
     "thumb": "thumbs/cobra/009-Cobra 10-3.jpg",
     "w": 1320,
     "h": 1320,
-    "kb": 116
+    "kb": 116,
+    "model": 10
    },
    {
     "name": "image",
@@ -1029,7 +1099,8 @@
     "thumb": "thumbs/cobra/010-image.jpg",
     "w": 1200,
     "h": 1200,
-    "kb": 291
+    "kb": 291,
+    "model": 10
    },
    {
     "name": "b1ee2e718a29c2d35ada9e6e1209528d",
@@ -1037,7 +1108,8 @@
     "thumb": "thumbs/cobra/011-b1ee2e718a29c2d35ada9e6e1209528d.jpg",
     "w": 2560,
     "h": 2240,
-    "kb": 1111
+    "kb": 1111,
+    "model": 10
    },
    {
     "name": "Cobra10渲染.67",
@@ -1045,7 +1117,8 @@
     "thumb": "thumbs/cobra/012-Cobra10渲染.67.jpg",
     "w": 4000,
     "h": 3500,
-    "kb": 3050
+    "kb": 3050,
+    "model": 10
    },
    {
     "name": "cobra10-烟",
@@ -1053,7 +1126,8 @@
     "thumb": "thumbs/cobra/013-cobra10-烟.jpg",
     "w": 3840,
     "h": 3360,
-    "kb": 1143
+    "kb": 1143,
+    "model": 10
    },
    {
     "name": "Cobra14渲染.bip.68",
@@ -1061,7 +1135,8 @@
     "thumb": "thumbs/cobra/014-Cobra14渲染.bip.68.jpg",
     "w": 3840,
     "h": 2879,
-    "kb": 3791
+    "kb": 3791,
+    "model": 14
    },
    {
     "name": "Cobra14渲染.bip.70",
@@ -1069,7 +1144,8 @@
     "thumb": "thumbs/cobra/015-Cobra14渲染.bip.70.jpg",
     "w": 3840,
     "h": 2879,
-    "kb": 3442
+    "kb": 3442,
+    "model": 14
    },
    {
     "name": "Cobra14渲染.bip.89",
@@ -1077,7 +1153,8 @@
     "thumb": "thumbs/cobra/016-Cobra14渲染.bip.89.jpg",
     "w": 3840,
     "h": 2879,
-    "kb": 3336
+    "kb": 3336,
+    "model": 14
    },
    {
     "name": "Cobra14渲染.bip.69",
@@ -1085,7 +1162,8 @@
     "thumb": "thumbs/cobra/017-Cobra14渲染.bip.69.jpg",
     "w": 3840,
     "h": 2879,
-    "kb": 3848
+    "kb": 3848,
+    "model": 14
    },
    {
     "name": "Cobra14渲染.bip.71",
@@ -1093,7 +1171,8 @@
     "thumb": "thumbs/cobra/018-Cobra14渲染.bip.71.jpg",
     "w": 3840,
     "h": 2879,
-    "kb": 3329
+    "kb": 3329,
+    "model": 14
    },
    {
     "name": "Cobra14渲染.bip.84",
@@ -1101,7 +1180,8 @@
     "thumb": "thumbs/cobra/019-Cobra14渲染.bip.84.jpg",
     "w": 2560,
     "h": 1919,
-    "kb": 1743
+    "kb": 1743,
+    "model": 14
    },
    {
     "name": "Cobra14渲染.bip.76",
@@ -1109,7 +1189,8 @@
     "thumb": "thumbs/cobra/020-Cobra14渲染.bip.76.jpg",
     "w": 3840,
     "h": 2879,
-    "kb": 1799
+    "kb": 1799,
+    "model": 14
    },
    {
     "name": "Cobra系列Banner 1",
@@ -1125,8 +1206,14 @@
     "thumb": "thumbs/cobra/022-image.jpg",
     "w": 2137,
     "h": 1109,
-    "kb": 1841
+    "kb": 1841,
+    "model": 10
    }
+  ],
+  "modelFilters": [
+   8,
+   10,
+   14
   ]
  },
  {

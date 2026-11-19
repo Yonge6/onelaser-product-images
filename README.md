@@ -1,6 +1,6 @@
 # OneLaser Product Images
 
-按机型分类的 OneLaser 产品图，共 204 张，包含 Figma 导出图和 KeyShot 渲染图。
+按机型分类的 OneLaser 产品图，共 207 张，包含 Figma 导出图和 KeyShot 渲染图。
 
 预览网页：https://yonge6.github.io/onelaser-product-images/
 
@@ -98,6 +98,8 @@
 
 ## Hydra Gen2（35）
 
+[Hydra 7 Gen2](https://yonge6.github.io/onelaser-product-images/#hydra-gen2-7) · [Hydra 9 Gen2](https://yonge6.github.io/onelaser-product-images/#hydra-gen2-9) · [Hydra 13 Gen2](https://yonge6.github.io/onelaser-product-images/#hydra-gen2-13) · [Hydra 16 Gen2](https://yonge6.github.io/onelaser-product-images/#hydra-gen2-16)
+
 - [Hydra 7 Gen2 正面渲染](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/hydra-gen2/hydra-7-gen2-front.png)
 - [Hydra 9 Gen2 正面渲染](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/hydra-gen2/hydra-9-gen2-front.png)
 - [Hydra 13 Gen2 正面渲染](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/hydra-gen2/hydra-13-gen2-front.png)
@@ -134,13 +136,18 @@
 - [微信图片_20260917154003_67_277](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/hydra-gen2/030-%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260917154003_67_277.png)
 - [微信图片_20260917154916_68_277](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/hydra-gen2/031-%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260917154916_68_277.png)
 
-## Cobra（22）
+## Cobra（25）
 
+[Cobra 8](https://yonge6.github.io/onelaser-product-images/#cobra-8) · [Cobra 10](https://yonge6.github.io/onelaser-product-images/#cobra-10) · [Cobra 14](https://yonge6.github.io/onelaser-product-images/#cobra-14)
+
+- [Cobra 8 正面渲染](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/cobra/cobra-8-front.png)
+- [Cobra 10 正面渲染](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/cobra/cobra-10-front.png)
+- [Cobra 14 正面渲染](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/cobra/cobra-14-front.png)
 - [image](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/cobra/001-image.png)
 - [image](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/cobra/002-image.png)
 - [image](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/cobra/003-image.png)
-- [Cobra7渲染20251222.54](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/cobra/004-Cobra7%E6%B8%B2%E6%9F%9320251222.54.png)
-- [Cobra7渲染20251222.57](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/cobra/005-Cobra7%E6%B8%B2%E6%9F%9320251222.57.png)
+- [Cobra 8 早期渲染（旧标 7，俯视）](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/cobra/004-Cobra7%E6%B8%B2%E6%9F%9320251222.54.png)
+- [Cobra 8 早期渲染（旧标 7，正面）](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/cobra/005-Cobra7%E6%B8%B2%E6%9F%9320251222.57.png)
 - [Cobra10渲染.60](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/cobra/006-Cobra10%E6%B8%B2%E6%9F%93.60.png)
 - [Cobra10渲染.63](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/cobra/007-Cobra10%E6%B8%B2%E6%9F%93.63.png)
 - [Cobra 10-2](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/cobra/008-Cobra%2010-2.png)
