@@ -44,7 +44,7 @@ jobs:
           if [ -z "$before" ] || [ "$before" = "0000000000000000000000000000000000000000" ]; then
             echo "series=all" >> "$GITHUB_OUTPUT"; exit 0
           fi
-          files=$(gh api "repos/${{ github.repository }}/compare/${before}...${{ github.sha }}" --paginate -q '.files[].filename' || echo "__fail__")
+          files=$(gh api "repos/${{ github.repository }}/compare/${before}...${{ github.sha }}" --paginate -q '.files[] | .filename, (.previous_filename // empty)' || echo "__fail__")
           if echo "$files" | grep -q "__fail__"; then echo "series=all" >> "$GITHUB_OUTPUT"; exit 0; fi
           s=$(echo "$files" | sed -n 's#^images/\([^/]*\)/.*#\1#p' | sort -u | tr '\n' ' ')
           echo "changed series: ${s:-none}"
