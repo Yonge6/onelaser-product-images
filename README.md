@@ -1,6 +1,6 @@
 # OneLaser Product Images
 
-从 Figma「OneLaser Products」导出的原图，按机型分类，共 200 张。
+按机型分类的 OneLaser 产品图，共 204 张，包含 Figma 导出图和 KeyShot 渲染图。
 
 预览网页：https://yonge6.github.io/onelaser-product-images/
 
@@ -96,8 +96,12 @@
 - [VertiGoGemini_Generated_Image_j2jwuvj2jwuvj2jw](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/vertigo/016-VertiGoGemini_Generated_Image_j2jwuvj2jwuvj2jw.png)
 - [image](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/vertigo/017-image.png)
 
-## Hydra Gen2（31）
+## Hydra Gen2（35）
 
+- [Hydra 7 Gen2 正面渲染](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/hydra-gen2/hydra-7-gen2-front.png)
+- [Hydra 9 Gen2 正面渲染](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/hydra-gen2/hydra-9-gen2-front.png)
+- [Hydra 13 Gen2 正面渲染](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/hydra-gen2/hydra-13-gen2-front.png)
+- [Hydra 16 Gen2 正面渲染](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/hydra-gen2/hydra-16-gen2-front.png)
 - [Hydra  7](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/hydra-gen2/001-Hydra%20%207.png)
 - [Hydra  7 拷贝](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/hydra-gen2/002-Hydra%20%207%20%E6%8B%B7%E8%B4%9D.png)
 - [7](https://raw.githubusercontent.com/Yonge6/onelaser-product-images/main/images/hydra-gen2/003-7.jpg)

@@ -665,6 +665,38 @@
   "slug": "hydra-gen2",
   "items": [
    {
+    "name": "Hydra 7 Gen2 正面渲染",
+    "file": "images/hydra-gen2/hydra-7-gen2-front.png",
+    "thumb": "thumbs/hydra-gen2/hydra-7-gen2-front.jpg",
+    "w": 2400,
+    "h": 1650,
+    "kb": 1341
+   },
+   {
+    "name": "Hydra 9 Gen2 正面渲染",
+    "file": "images/hydra-gen2/hydra-9-gen2-front.png",
+    "thumb": "thumbs/hydra-gen2/hydra-9-gen2-front.jpg",
+    "w": 2400,
+    "h": 1650,
+    "kb": 1399
+   },
+   {
+    "name": "Hydra 13 Gen2 正面渲染",
+    "file": "images/hydra-gen2/hydra-13-gen2-front.png",
+    "thumb": "thumbs/hydra-gen2/hydra-13-gen2-front.jpg",
+    "w": 2400,
+    "h": 1650,
+    "kb": 1740
+   },
+   {
+    "name": "Hydra 16 Gen2 正面渲染",
+    "file": "images/hydra-gen2/hydra-16-gen2-front.png",
+    "thumb": "thumbs/hydra-gen2/hydra-16-gen2-front.jpg",
+    "w": 2400,
+    "h": 1650,
+    "kb": 1568
+   },
+   {
     "name": "Hydra  7",
     "file": "images/hydra-gen2/001-Hydra  7.png",
     "thumb": "thumbs/hydra-gen2/001-Hydra  7.jpg",
