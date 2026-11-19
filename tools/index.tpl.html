@@ -233,7 +233,9 @@ const JUNK = /^(微信图片|image\b|\d+image|ChatGPT Image|Frame\b|Rectangle\b|
 /* zh -> en terms, longest first */
 const DICT = [
   ["教学实验室激光雕刻作品场景", " Education lab engraving scene"], ["仰角雕刻状态", "Low-angle engraving"], ["取下操作屏", "control panel removed"],
-  ["门盖上升", "lid raised"], ["早期渲染", "Early render"], ["正面渲染", "Front render"], ["白底图", " white background"], ["场景图", " scene"],
+  ["门盖上升", "lid raised"], ["早期渲染", "Early render"], ["正面渲染", "Front render"],
+  ["左前侧渲染", "Front-left render"], ["右前侧渲染", "Front-right render"], ["右后侧渲染", "Rear-right render"],
+  ["白底图", " white background"], ["场景图", " scene"],
   ["正右侧", "Front-right side"], ["侧后视", "Rear-side view"], ["正后视", "Rear view"], ["右俯视", "Right top view"], ["左俯视", "Left top view"],
   ["右侧视", "Right side view"], ["正右视", "Front-right view"], ["旧标", "old label "], ["系列", " series "], ["渲染", " render"],
   ["正视", "Front view"], ["后视", "Rear view"], ["右视", "Right view"], ["左视", "Left view"], ["右侧", "Right side"], ["左侧", "Left side"],
@@ -385,7 +387,7 @@ function open(i, fresh = true) {
   }
   $("#lbt").textContent = it.label;
   $("#lbs").textContent = [gTitle(it.g), j >= 0 ? `${j + 1} / ${pos.length}` : "", `${it.w}×${it.h}`, fmt(it.kb), it.name && it.name !== it.label ? `${t("orig")}: ${it.name}` : ""].filter(Boolean).join(" · ");
-  const d = $("#lbd"); d.href = url(it.file); d.setAttribute("download", it.file.split("/").pop());
+  const d = $("#lbd"); d.href = enc(it.file); d.setAttribute("download", it.file.split("/").pop());
 }
 function step(s) { const pos = visible(), j = pos.indexOf(cur); if (j >= 0) open(pos[(j + s + pos.length) % pos.length]); }
 function close() {

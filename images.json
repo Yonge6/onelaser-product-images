@@ -674,12 +674,66 @@
     "model": 7
    },
    {
+    "name": "Hydra 7 Gen2 左前侧渲染",
+    "file": "images/hydra-gen2/hydra-gen2-7-005.png",
+    "thumb": "thumbs/hydra-gen2/hydra-gen2-7-005.jpg",
+    "w": 2400,
+    "h": 1650,
+    "kb": 1765,
+    "model": 7
+   },
+   {
+    "name": "Hydra 7 Gen2 右前侧渲染",
+    "file": "images/hydra-gen2/hydra-gen2-7-006.png",
+    "thumb": "thumbs/hydra-gen2/hydra-gen2-7-006.jpg",
+    "w": 2400,
+    "h": 1650,
+    "kb": 1652,
+    "model": 7
+   },
+   {
+    "name": "Hydra 7 Gen2 右后侧渲染",
+    "file": "images/hydra-gen2/hydra-gen2-7-007.png",
+    "thumb": "thumbs/hydra-gen2/hydra-gen2-7-007.jpg",
+    "w": 2400,
+    "h": 1650,
+    "kb": 1647,
+    "model": 7
+   },
+   {
     "name": "Hydra 9 Gen2 正面渲染",
     "file": "images/hydra-gen2/hydra-gen2-9-001.png",
     "thumb": "thumbs/hydra-gen2/hydra-gen2-9-001.jpg",
     "w": 2400,
     "h": 1650,
     "kb": 1399,
+    "model": 9
+   },
+   {
+    "name": "Hydra 9 Gen2 左前侧渲染",
+    "file": "images/hydra-gen2/hydra-gen2-9-015.png",
+    "thumb": "thumbs/hydra-gen2/hydra-gen2-9-015.jpg",
+    "w": 2400,
+    "h": 1650,
+    "kb": 1625,
+    "model": 9
+   },
+   {
+    "name": "Hydra 9 Gen2 右前侧渲染",
+    "file": "images/hydra-gen2/hydra-gen2-9-016.png",
+    "thumb": "thumbs/hydra-gen2/hydra-gen2-9-016.jpg",
+    "w": 2400,
+    "h": 1650,
+    "kb": 1397,
+    "model": 9
+   },
+   {
+    "name": "Hydra 9 Gen2 右后侧渲染",
+    "file": "images/hydra-gen2/hydra-gen2-9-017.png",
+    "thumb": "thumbs/hydra-gen2/hydra-gen2-9-017.jpg",
+    "w": 2400,
+    "h": 1650,
+    "kb": 1065,
     "model": 9
    },
    {
@@ -692,12 +746,66 @@
     "model": 13
    },
    {
+    "name": "Hydra 13 Gen2 左前侧渲染",
+    "file": "images/hydra-gen2/hydra-gen2-13-006.png",
+    "thumb": "thumbs/hydra-gen2/hydra-gen2-13-006.jpg",
+    "w": 2400,
+    "h": 1650,
+    "kb": 3272,
+    "model": 13
+   },
+   {
+    "name": "Hydra 13 Gen2 右前侧渲染",
+    "file": "images/hydra-gen2/hydra-gen2-13-007.png",
+    "thumb": "thumbs/hydra-gen2/hydra-gen2-13-007.jpg",
+    "w": 2400,
+    "h": 1650,
+    "kb": 2673,
+    "model": 13
+   },
+   {
+    "name": "Hydra 13 Gen2 右后侧渲染",
+    "file": "images/hydra-gen2/hydra-gen2-13-008.png",
+    "thumb": "thumbs/hydra-gen2/hydra-gen2-13-008.jpg",
+    "w": 2400,
+    "h": 1650,
+    "kb": 1935,
+    "model": 13
+   },
+   {
     "name": "Hydra 16 Gen2 正面渲染",
     "file": "images/hydra-gen2/hydra-gen2-16-001.png",
     "thumb": "thumbs/hydra-gen2/hydra-gen2-16-001.jpg",
     "w": 2400,
     "h": 1650,
     "kb": 1568,
+    "model": 16
+   },
+   {
+    "name": "Hydra 16 Gen2 左前侧渲染",
+    "file": "images/hydra-gen2/hydra-gen2-16-008.png",
+    "thumb": "thumbs/hydra-gen2/hydra-gen2-16-008.jpg",
+    "w": 2400,
+    "h": 1650,
+    "kb": 2313,
+    "model": 16
+   },
+   {
+    "name": "Hydra 16 Gen2 右前侧渲染",
+    "file": "images/hydra-gen2/hydra-gen2-16-009.png",
+    "thumb": "thumbs/hydra-gen2/hydra-gen2-16-009.jpg",
+    "w": 2400,
+    "h": 1650,
+    "kb": 2139,
+    "model": 16
+   },
+   {
+    "name": "Hydra 16 Gen2 右后侧渲染",
+    "file": "images/hydra-gen2/hydra-gen2-16-010.png",
+    "thumb": "thumbs/hydra-gen2/hydra-gen2-16-010.jpg",
+    "w": 2400,
+    "h": 1650,
+    "kb": 1723,
     "model": 16
    },
    {
@@ -997,6 +1105,33 @@
     "model": 8
    },
    {
+    "name": "Cobra 8 左前侧渲染",
+    "file": "images/cobra/cobra-8-005.png",
+    "thumb": "thumbs/cobra/cobra-8-005.jpg",
+    "w": 2400,
+    "h": 1650,
+    "kb": 2197,
+    "model": 8
+   },
+   {
+    "name": "Cobra 8 右前侧渲染",
+    "file": "images/cobra/cobra-8-006.png",
+    "thumb": "thumbs/cobra/cobra-8-006.jpg",
+    "w": 2400,
+    "h": 1650,
+    "kb": 2173,
+    "model": 8
+   },
+   {
+    "name": "Cobra 8 右后侧渲染",
+    "file": "images/cobra/cobra-8-007.png",
+    "thumb": "thumbs/cobra/cobra-8-007.jpg",
+    "w": 2400,
+    "h": 1650,
+    "kb": 2122,
+    "model": 8
+   },
+   {
     "name": "Cobra 10 正面渲染",
     "file": "images/cobra/cobra-10-001.png",
     "thumb": "thumbs/cobra/cobra-10-001.jpg",
@@ -1006,12 +1141,66 @@
     "model": 10
    },
    {
+    "name": "Cobra 10 左前侧渲染",
+    "file": "images/cobra/cobra-10-011.png",
+    "thumb": "thumbs/cobra/cobra-10-011.jpg",
+    "w": 2400,
+    "h": 1650,
+    "kb": 2303,
+    "model": 10
+   },
+   {
+    "name": "Cobra 10 右前侧渲染",
+    "file": "images/cobra/cobra-10-012.png",
+    "thumb": "thumbs/cobra/cobra-10-012.jpg",
+    "w": 2400,
+    "h": 1650,
+    "kb": 2427,
+    "model": 10
+   },
+   {
+    "name": "Cobra 10 右后侧渲染",
+    "file": "images/cobra/cobra-10-013.png",
+    "thumb": "thumbs/cobra/cobra-10-013.jpg",
+    "w": 2400,
+    "h": 1650,
+    "kb": 2314,
+    "model": 10
+   },
+   {
     "name": "Cobra 14 正面渲染",
     "file": "images/cobra/cobra-14-001.png",
     "thumb": "thumbs/cobra/cobra-14-001.jpg",
     "w": 2400,
     "h": 1650,
     "kb": 1717,
+    "model": 14
+   },
+   {
+    "name": "Cobra 14 左前侧渲染",
+    "file": "images/cobra/cobra-14-009.png",
+    "thumb": "thumbs/cobra/cobra-14-009.jpg",
+    "w": 2400,
+    "h": 1650,
+    "kb": 1812,
+    "model": 14
+   },
+   {
+    "name": "Cobra 14 右前侧渲染",
+    "file": "images/cobra/cobra-14-010.png",
+    "thumb": "thumbs/cobra/cobra-14-010.jpg",
+    "w": 2400,
+    "h": 1650,
+    "kb": 1896,
+    "model": 14
+   },
+   {
+    "name": "Cobra 14 右后侧渲染",
+    "file": "images/cobra/cobra-14-011.png",
+    "thumb": "thumbs/cobra/cobra-14-011.jpg",
+    "w": 2400,
+    "h": 1650,
+    "kb": 1699,
     "model": 14
    },
    {
